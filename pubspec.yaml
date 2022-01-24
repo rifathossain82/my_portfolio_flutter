@@ -44,6 +44,8 @@ dependencies:
   lottie: ^1.2.1
   animated_splash_screen: ^1.1.0
   rflutter_alert: ^2.0.4
+  carousel_slider: ^4.0.0
+  smooth_page_indicator: ^1.0.0+2
   get_it:
 
 dev_dependencies:
@@ -78,6 +80,15 @@ flutter:
     - images/myPic1.jpg
     - images/lotti_animation.json
     - images/logo4.json
+    - images/aboutPage_image/education.png
+    - images/aboutPage_image/skills.png
+    - images/aboutPage_image/education2.png
+    - images/aboutPage_image/20201203_093652.jpg
+    - images/aboutPage_image/20201203_094008.jpg
+    - images/aboutPage_image/20201203_110907.jpg
+    - images/aboutPage_image/20201203_110923.jpg
+    - images/aboutPage_image/9820201203_100235.jpg
+    - images/aboutPage_image/20211029_172853.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

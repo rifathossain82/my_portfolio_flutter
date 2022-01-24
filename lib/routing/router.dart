@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/pages/about/aboutPage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case HomeRoute:
       return getPageRoute(Homepage());
     case AboutRoute:
-      return getPageRoute(Center(child: Text('About'),));
+      return getPageRoute(AboutPage());
     case ProjectsRoute:
       return getPageRoute(Center(child: Text('project'),));
     case BlogRoute:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/pages/about/aboutPage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:my_protfolio/widget/ligh_dark/light_dark.dart';
@@ -20,17 +21,20 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
 
   final pages=[
     Homepage(),
-    Text('Favorite',style: TextStyle(fontSize: 52),),
+    AboutPage(),
     Text('Feedback',style: TextStyle(fontSize: 52),),
     Text('Settings',style: TextStyle(fontSize: 52),),
     Text('contacts',style: TextStyle(fontSize: 52),),
   ];
 
+  String appbarName=appBar_name[0];
+
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
       appBar: AppBar(
-        title: Text(app_name),
+        title: Text(appbarName),
         elevation: 0,
         actions: [
           Light_Dark_Mode(),
@@ -41,29 +45,24 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
           NavigationRail(
             destinations: [
               NavigationRailDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home),
+                icon: Icon(Icons.home),
                 label: Text(home_),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.info_outline),
+                icon: Icon(Icons.info),
                 label: Text(about_),
-                selectedIcon: Icon(Icons.info),
               ),
               NavigationRailDestination(
                 icon: Icon(Icons.apps),
                 label: Text(projects_),
-                selectedIcon: Icon(Icons.apps_outlined)
               ),
               NavigationRailDestination(
-                  icon: Icon(Icons.event_note),
+                  icon: Icon(Icons.speaker_notes),
                   label: Text(blog_),
-                selectedIcon: Icon(Icons.event_outlined)
               ),
               NavigationRailDestination(
                   icon: Icon(Icons.contact_support),
                   label: Text(contacts_),
-                  selectedIcon: Icon(Icons.contact_support),
               ),
             ],
             selectedIndex: index,
@@ -80,6 +79,7 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
             onDestinationSelected: (_index){
               setState(() {
                 index=_index;
+                appbarName=appBar_name[index];
               });
             },
             ),

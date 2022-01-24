@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
@@ -9,12 +10,11 @@ class NavBar_Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final logo=Provider.of<ThemeProvider>(context).themeMode==ThemeMode.dark
-        ?'images/logo4.json':'images/logo4.json';
-
-    return SizedBox(
-      child: Lottie.asset(logo,height: 100,width: 100,),
+    return Padding(
+      padding: const EdgeInsets.only(left: 8),
+      child: SizedBox(
+        child: FaIcon(FontAwesomeIcons.dAndD,size: 65,),
+      ),
     );
   }
 }
