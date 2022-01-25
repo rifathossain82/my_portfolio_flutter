@@ -90,6 +90,31 @@ flutter:
     - images/aboutPage_image/9820201203_100235.jpg
     - images/aboutPage_image/20211029_172853.jpg
 
+    #flutter projects photo
+    - images/projects_image/F_amarBangla.png
+    - images/projects_image/F_bmi.png
+    - images/projects_image/F_currencyConverter1.png
+    - images/projects_image/F_currencyConverter2.png
+    - images/projects_image/F_news.png
+    - images/projects_image/F_qrCodeScaner.png
+
+    #android project photo
+    - images/projects_image/A_adorsholopi_logo.jpg
+    - images/projects_image/A_beta_browser.jpg
+    - images/projects_image/A_calculaotr_logo.jpg
+    - images/projects_image/A_eshop.png
+    - images/projects_image/A_scanner_por.jpg
+    - images/projects_image/A_unique_trade_link.jpg
+
+    #desktop project photo
+    - images/projects_image/D_emailSender.jpg
+    - images/projects_image/D_fpi_StudentInfo.png
+    - images/projects_image/D_hospitalManagement.jpg
+    - images/projects_image/D_hostelManagement.jpg
+    - images/projects_image/D_inventorySystem.jpg
+    - images/projects_image/D_library.png
+    - images/projects_image/D_schoolManagement.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

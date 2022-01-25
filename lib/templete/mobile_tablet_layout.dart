@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/pages/about/aboutPage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
+import 'package:my_protfolio/pages/projects/projectPage.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:my_protfolio/widget/ligh_dark/light_dark.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,7 +23,7 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
   final pages=[
     Homepage(),
     AboutPage(),
-    Text('Feedback',style: TextStyle(fontSize: 52),),
+    ProjectsPage(),
     Text('Settings',style: TextStyle(fontSize: 52),),
     Text('contacts',style: TextStyle(fontSize: 52),),
   ];

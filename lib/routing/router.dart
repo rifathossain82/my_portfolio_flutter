@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/pages/about/aboutPage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
+import 'package:my_protfolio/pages/projects/projectPage.dart';
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case HomeRoute:
@@ -9,7 +10,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case AboutRoute:
       return getPageRoute(AboutPage());
     case ProjectsRoute:
-      return getPageRoute(Center(child: Text('project'),));
+      return getPageRoute(ProjectsPage());
     case BlogRoute:
       return getPageRoute(Center(child: Text('blog'),));
     case ContactsRoute:

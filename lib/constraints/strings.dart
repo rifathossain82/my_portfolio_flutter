@@ -1,5 +1,6 @@
 String app_name='Portfolio';
 String my_name='Rifat Hossain';
+String footer_text='All rights reserved by officialrifat82@gmail.com';
 
 //navbar item name
 String home_='HOME';
@@ -80,3 +81,64 @@ List<String> my_images=[
   'images/aboutPage_image/20201203_110923.jpg',
   'images/aboutPage_image/9820201203_100235.jpg',
 ];
+
+
+//string for projects page
+String sectionTitle1_project='Flutter Apps';
+String sectionTitle2_project='Android Apps';
+String sectionTitle3_project='Desktop Application';
+
+String sectionDes1_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
+String sectionDes2_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
+String sectionDes3_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
+
+
+
+//flutter project data
+String project1Name='Amar Bangla';
+String project2Name='BMI Calculator';
+String project3Name='Currency Converter';
+String project4Name='Currency Converter Pro';
+String project5Name='News Now';
+String project6Name='Scanner Pro';
+
+String project1des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
+String project2des='';
+String project3des='';
+String project4des='';
+String project5des='';
+String project6des='';
+
+
+//android project data
+String project7Name='আদর্শলিপি';
+String project8Name='Beta';
+String project9Name='WINCAL Calculator';
+String project10Name='eshop';
+String project11Name='Scanner';
+String project12Name='Unique Trade Link';
+
+String project7des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
+String project8des='';
+String project9des='';
+String project10des='';
+String project11des='';
+String project12des='';
+
+
+//desktop project data
+String project13Name='School Management System';
+String project14Name='Library Management System';
+String project15Name='Inventory Management System';
+String project16Name='Hostel Management System';
+String project17Name='Hospital Management System';
+String project18Name='FPI Student Info';
+String project19Name='Email Sender';
+
+String project13des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
+String project14des='';
+String project15des='';
+String project16des='';
+String project17des='';
+String project18des='';
+String project19des='';

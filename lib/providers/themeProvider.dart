@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../constraints/colors.dart';
 
@@ -16,6 +17,7 @@ class ThemeProvider extends ChangeNotifier {
 class MyTheme {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: Color(0xFF212936),
+    cardTheme: CardTheme(color:  Colors.black12,shadowColor: Colors.black87),
     colorScheme: ColorScheme.dark(),
     primaryColor: Colors.white.withOpacity(0.5),
     iconTheme: IconThemeData(color: Colors.white70),
@@ -36,6 +38,7 @@ class MyTheme {
       scaffoldBackgroundColor: Colors.white,
       colorScheme: ColorScheme.light(),
       primaryColor: Colors.black,
+      cardTheme: CardTheme(color: Colors.white,shadowColor: Colors.blueGrey[900]),
       iconTheme: IconThemeData(color: Colors.black.withOpacity(0.8)),
       appBarTheme: AppBarTheme(color: Colors.blue),
       drawerTheme: DrawerThemeData(backgroundColor: Colors.green),
