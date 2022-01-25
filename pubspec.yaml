@@ -115,6 +115,14 @@ flutter:
     - images/projects_image/D_library.png
     - images/projects_image/D_schoolManagement.jpg
 
+    #blog images
+    - images/blog/dart.png
+    - images/blog/flutter.png
+    - images/blog/features.jpg
+    - images/blog/flutter_backend.png
+    - images/blog/flutter_react.png
+    - images/blog/flutter_supported.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -110,6 +110,10 @@ class _AboutPageState extends State<AboutPage> {
         ),
 
 
+        SizedBox(height: 50,),
+        footer(),
+
+
 
       ],
     );
@@ -196,7 +200,8 @@ class _AboutPageState extends State<AboutPage> {
             myImage_carousel()
           ],
         ),
-
+        SizedBox(height: 50,),
+        footer(),
       ],
     );
   }
@@ -437,9 +442,32 @@ class _AboutPageState extends State<AboutPage> {
           //
           //   ),
           // ),
-          SizedBox(height: 80),
         ],
       ),
+    );
+  }
+
+  Widget footer() {
+    return Column(
+      children: [
+        Divider(),
+        SizedBox(
+          height: 80,
+          child: Center(
+            child: RichText(
+              text: TextSpan(
+                  text: 'All Rights Reserved By ',
+                  style: GoogleFonts.ubuntu(color: Colors.grey),
+                  children: [
+                    TextSpan(
+                        text: 'officaialrifat82@gmail.com',
+                        style: GoogleFonts.ubuntu(
+                            color: Colors.red, fontStyle: FontStyle.italic))
+                  ]),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

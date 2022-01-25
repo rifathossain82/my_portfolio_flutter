@@ -625,11 +625,12 @@ class _ProjectsPageState extends State<ProjectsPage> {
       children: [
         Divider(),
         SizedBox(
-          height: 100,
+          height: 80,
           child: Center(
             child: RichText(
               text: TextSpan(
                   text: 'All Rights Reserved By ',
+                  style: GoogleFonts.ubuntu(color: Colors.grey),
                   children: [
                     TextSpan(
                         text: 'officaialrifat82@gmail.com',

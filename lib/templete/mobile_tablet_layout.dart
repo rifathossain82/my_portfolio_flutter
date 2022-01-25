@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/pages/about/aboutPage.dart';
+import 'package:my_protfolio/pages/blog/blogpage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
 import 'package:my_protfolio/pages/projects/projectPage.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
@@ -24,7 +25,7 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
     Homepage(),
     AboutPage(),
     ProjectsPage(),
-    Text('Settings',style: TextStyle(fontSize: 52),),
+    BlogPage(),
     Text('contacts',style: TextStyle(fontSize: 52),),
   ];
 
