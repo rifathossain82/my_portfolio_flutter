@@ -4,6 +4,7 @@ import 'package:my_protfolio/pages/home/homepage.dart';
 import 'package:my_protfolio/pages/splashScreen/splash_screen.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:my_protfolio/templete/layoutTemplete.dart';
+import 'package:overlay_support/overlay_support.dart';
 import 'package:provider/provider.dart';
 
 import 'locator.dart';
@@ -22,13 +23,15 @@ class MyApp extends StatelessWidget {
       create: (context) => ThemeProvider(),
       builder: (context, _) {
         final themeProvider = Provider.of<ThemeProvider>(context);
-        return MaterialApp(
-          title: app_name,
-          debugShowCheckedModeBanner: false,
-          theme: MyTheme.lightTheme,
-          darkTheme: MyTheme.darkTheme,
-          themeMode: themeProvider.themeMode,
-          home: LayoutTemplete(),
+        return OverlaySupport.global(
+          child: MaterialApp(
+            title: app_name,
+            debugShowCheckedModeBanner: false,
+            theme: MyTheme.lightTheme,
+            darkTheme: MyTheme.darkTheme,
+            themeMode: themeProvider.themeMode,
+            home: SplashScreen(),
+          ),
         );
       },
     );

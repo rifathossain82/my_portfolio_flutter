@@ -59,7 +59,7 @@ class _AboutPageState extends State<AboutPage> {
             SizedBox(
               height: 20,
             ),
-            content(content_about1),
+            content(description),
           ],
         ),
 
@@ -100,7 +100,25 @@ class _AboutPageState extends State<AboutPage> {
 
         SizedBox(height: 150,),
 
-        //section my education
+
+        //section my certified
+        Center(child: title_text(title_about5)),
+        SizedBox(
+          height: 40,
+        ),
+        Column(
+          children: [
+            image('images/aboutPage_image/certified.jpg'),
+            SizedBox(
+              height: 80,
+            ),
+            myCertificate(),
+          ],
+        ),
+
+        SizedBox(height: 150,),
+
+        //section my photos
         Center(child: title_text(title_about4)),
         SizedBox(
           height: 40,
@@ -146,7 +164,7 @@ class _AboutPageState extends State<AboutPage> {
             SizedBox(
               width: 80,
             ),
-            Expanded(flex:3,child: content(content_about1)),
+            Expanded(flex:3,child: content(description)),
           ],
         ),
 
@@ -190,7 +208,27 @@ class _AboutPageState extends State<AboutPage> {
 
         SizedBox(height: 150,),
 
-        //section my education
+
+        //section my certified
+        Center(child: title_text(title_about5)),
+        SizedBox(
+          height: 50,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(flex:3,child: myCertificate()),
+            SizedBox(
+              width: 80,
+            ),
+            Expanded(flex:2,child: image('images/aboutPage_image/certified.jpg')),
+          ],
+        ),
+
+        SizedBox(height: 150,),
+
+        //section my photo
         Center(child: title_text(title_about4)),
         SizedBox(
           height: 50,
@@ -377,6 +415,39 @@ class _AboutPageState extends State<AboutPage> {
           children: [
             Expanded(child: Text(education2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
             Text(education2_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+      ],
+    );
+  }
+
+  Widget myCertificate(){
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        //utc
+        Text(certificate_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(certificate_institute,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Text(certificate_institute_address,style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(certificate_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(certificate_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+        SizedBox(height: 50,),
+
+        //ezze tech
+        Text(certificate2_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(certificate2_institute,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Text(certificate2_institute_address,style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(certificate2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(certificate2_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
           ],
         ),
 

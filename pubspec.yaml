@@ -48,6 +48,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   google_maps_flutter: ^2.1.1
   http: ^0.13.4
+  overlay_support: ^1.2.1
   get_it:
 
 dev_dependencies:
@@ -85,6 +86,7 @@ flutter:
     - images/aboutPage_image/education.png
     - images/aboutPage_image/skills.png
     - images/aboutPage_image/education2.png
+    - images/aboutPage_image/certified.jpg
     - images/aboutPage_image/20201203_093652.jpg
     - images/aboutPage_image/20201203_094008.jpg
     - images/aboutPage_image/20201203_110907.jpg

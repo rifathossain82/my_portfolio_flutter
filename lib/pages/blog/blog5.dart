@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class Blog5 extends StatelessWidget {
   Blog5({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Blog5 extends StatelessWidget {
         title: AutoSizeText(blog5_title),
       ),
       body: Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: EdgeInsets.only(top: 30,right: 30,left: 30),
         child: ListView(
           children: [
             title_view('Flutter vs React Native'),
@@ -31,8 +32,8 @@ class Blog5 extends StatelessWidget {
             description_view(blog5_detailsdes4),
             title_view(blog5_detailsTitle5),
             description_view(blog5_detailsdes5),
-
-            SizedBox(height: 50,)
+            SizedBox(height: 50,),
+            footer(),
           ],
         ),
       ),

@@ -1,5 +1,8 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:overlay_support/overlay_support.dart';
 
 Future sendEmail(
     {required String name,
@@ -34,9 +37,15 @@ async {
   );
 
   if(response.statusCode==200){
-    print('success');
+    showSimpleNotification(
+      Text('Email Sent Successfully.',style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w400),),
+      background: Colors.blueGrey.shade600,
+    );
   }
   else{
-    print('failed');
+    showSimpleNotification(
+      Text('Email Sent Failed.',style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w400),),
+      background: Colors.blueGrey.shade600,
+    );
   }
 }

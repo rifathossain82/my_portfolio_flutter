@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class Blog1 extends StatelessWidget {
   Blog1({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Blog1 extends StatelessWidget {
         title: AutoSizeText(blog1_title),
       ),
       body: Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: EdgeInsets.only(top: 30,right: 30,left: 30),
         child: ListView(
           children: [
             title_view(blog1_title),
@@ -29,7 +30,8 @@ class Blog1 extends StatelessWidget {
             description_view(blog_detailsdes3),
             title_view(blog_detailsTitle4),
             description_view(blog_detailsdes4),
-            SizedBox(height: 50,)
+            SizedBox(height: 50,),
+            footer(),
           ],
         ),
       ),

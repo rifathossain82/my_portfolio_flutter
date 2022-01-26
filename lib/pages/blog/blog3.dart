@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class Blog3 extends StatelessWidget {
   Blog3({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Blog3 extends StatelessWidget {
         title: AutoSizeText(blog3_title),
       ),
       body: Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: EdgeInsets.only(top: 30,right: 30,left: 30),
         child: ListView(
           children: [
             description_view('Here are 6 features of the cross-platform mobile app development framework:'),
@@ -32,7 +33,8 @@ class Blog3 extends StatelessWidget {
             description_view(blog3_detailsdes5),
             title_view(blog3_detailsTitle6),
             description_view(blog3_detailsdes6),
-            SizedBox(height: 50,)
+            SizedBox(height: 50,),
+            footer(),
           ],
         ),
       ),

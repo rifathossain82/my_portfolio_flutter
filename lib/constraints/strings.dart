@@ -1,4 +1,4 @@
-String app_name='Portfolio';
+String app_name='RIFAT HOSSAIN';
 String my_name='Rifat Hossain';
 String footer_text='All rights reserved by officialrifat82@gmail.com';
 
@@ -31,7 +31,7 @@ List<String> appBar_name=[
 //home string
 String title1='HI! I\'M RIFAT';
 String title2='Flutter Apps Developer';
-String description='I have also 2 years of experience in native android and Desktop Application. Since my start, I have worked over many Android and desktop Application projects for many clients and produced high-quality work. ';
+String description='I have 2 years of experience in Apps Development. I can develop native Android, Flutter, and Desktop applications. Since my start, I have worked over many Android and desktop Application projects for many clients and produced high-quality work. ';
 String hireMe='Hire me';
 
 //all social link of mine
@@ -57,6 +57,7 @@ String heading_about='About me';
 String title_about1='who i am';
 String title_about2='my skills';
 String title_about3='my education';
+String title_about5='certified';
 String title_about4='my photos';
 
 String content_about1Title="I'm Rifat and I'm a Apps Developer";
@@ -76,6 +77,19 @@ String education2_institute='Kandughar B.B.S. High School';
 String education2_duration='01/2012 - 03/2017';
 String education2_result='4.36';
 
+String certificate_title='Android Apps Development Using Java';
+String certificate_institute='Universal Technology Corporation';
+String certificate_institute_address='Dr. para, Feni, Bangladesh.';
+String certificate_duration='02/2019 - 11/2021';
+String certificate_result='Successfully Completed';
+
+
+String certificate2_title='Mobile Game & Applications Using Flutter';
+String certificate2_institute='Ezze Technology Limited';
+String certificate2_institute_address='49, Software Technology Park, Janata Tower (7th floor), Kawran Bazar, Dhaka-1215.';
+String certificate2_duration='10/2021 - 01/2022';
+String certificate2_result='Successfully Completed';
+
 
 List<String> my_images=[
   'images/aboutPage_image/20201203_110907.jpg',
@@ -89,26 +103,26 @@ String sectionTitle1_project='Flutter Apps';
 String sectionTitle2_project='Android Apps';
 String sectionTitle3_project='Desktop Application';
 
-String sectionDes1_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
-String sectionDes2_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
-String sectionDes3_project='Lorem ipsum is a placeholder text\n commonly used to demonstrate the visual form of a \ndocument or a typeface without relying on meaningful content.';
+String sectionDes1_project='Here are some projects from my flutter works.\n I try to solve difficult and common problems using Flutter.\n These apps are also responsive on mobile, tablet, and desktop.';
+String sectionDes2_project='Here are some projects from my native android works.\n I try to solve difficult and common problems using Android Platforms.\n These apps are also responsive on every size of the mobile screen.';
+String sectionDes3_project='Here are some projects from my java swing works.\n I try to solve difficult and regular problems using java swing platforms.\n These apps are also responsive on every size of the desktop screen.';
 
 
 
 //flutter project data
 String project1Name='Amar Bangla';
 String project2Name='BMI Calculator';
-String project3Name='Currency Converter';
-String project4Name='Currency Converter Pro';
+String project3Name='Currency Converter Pro';
+String project4Name='Currency Converter';
 String project5Name='News Now';
 String project6Name='Scanner Pro';
 
 String project1des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
-String project2des='';
-String project3des='';
-String project4des='';
-String project5des='';
-String project6des='';
+String project2des='🔸 Calculate Your BMI.\n🔸 Attractive User Interface.\n🔸 Smart Error Handling.\n🔸 The small size of App.\n🔸 Calculate actual BMI';
+String project3des='🔸 Live Currency Converter.\n🔸 Attractive User Interface.\n🔸 Supported All Currency.\n🔸 Show default value.\n🔸 Show last updated date & time.';
+String project4des='🔸 Live Currency Converter.\n🔸 Attractive User Interface.\n🔸 Supported All Currency.\n🔸 Smart Error Handling.';
+String project5des='🔸 Shown Recent News by Api.\n🔸 Attractive User Interface.\n🔸 Using Provider State Management.\n🔸 Smart Error Handling.';
+String project6des='🔸 Create & Scan QR code.\n🔸 Create & Scar Bar code.\n🔸 Strong Security System.\n🔸 Search Automatically after scan.\n🔸 Attractive User Interface';
 
 
 //android project data
@@ -119,12 +133,12 @@ String project10Name='eshop';
 String project11Name='Scanner';
 String project12Name='Unique Trade Link';
 
-String project7des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
-String project8des='';
-String project9des='';
-String project10des='';
-String project11des='';
-String project12des='';
+String project7des='🔸 It\'s a Kids book.\n🔸 Learn with the game.\n🔸 Learn from video.\n🔸 Learn by listening.\n🔸 Attractive image with lessons.';
+String project8des='🔸 A Fastest Browser.\n🔸 Supported Light & Dark mode.\n🔸 Save the History.\n🔸 Shown Important website.\n🔸 Google Authentication.';
+String project9des='🔸 Like windows calculator.\n🔸 4 calculator in one.\n🔸 4 converter in one.\n🔸 Auto Save History\n🔸 Attractive UI.';
+String project10des='🔸 Ecommerce Apps.\n🔸 Works with mysql.\n🔸 Strong Security System.\n🔸 Categorized item\n🔸 With Admin Panel.';
+String project11des='🔸 Create & Scan QR code.\n🔸 Create & Scar Bar code.\n🔸 Strong Security System.\n🔸 Search Automatically after scan.\n🔸 Attractive User Interface';
+String project12des='🔸 This is a WebView App\n🔸 It has Auto Refresh.\n🔸 Bottom Menu to get more features.\n🔸 Scroll smoothly whole app.';
 
 
 //desktop project data
@@ -136,13 +150,13 @@ String project17Name='Hospital Management System';
 String project18Name='FPI Student Info';
 String project19Name='Email Sender';
 
-String project13des='🔸 Basic Information Bangladesh.\n🔸 All District Information.\n🔸 National Services.\n🔸 Important Phone Numbers.\n🔸 All USSD Code of SIM.\n🔸 Mobile Banking Information';
-String project14des='';
-String project15des='';
-String project16des='';
-String project17des='';
-String project18des='';
-String project19des='';
+String project13des='🔸 Manage all students data.\n🔸 Manage teachers and salary.\n🔸 Calculate balance & expenses.\n🔸 Create Auto Result Sheet.\n🔸 Strong Security System.\n🔸 Shown Yearly Summary.';
+String project14des='🔸 Manage all books.\n🔸 Determining fines automatically.\n🔸 Shown Statistic of Books.\n🔸 Strong Security System.\n🔸 Attractive User Interface.';
+String project15des='🔸 Manage products and supplier.\n🔸 Shown Stock Reports.\n🔸 Calculate Balance Automatically.\n🔸 Strong Security System.\n🔸 Attractive User Interface.\n🔸 Shown summary monthly & yearly.';
+String project16des='🔸 Manage Hostel Members data.\n🔸 Strong Payment System.\n🔸 Manage Regular Meal & Shopping.\n🔸 Strong Security System.\n🔸 Attractive User Interface.\n🔸 Shown Monthly Cost & Balance.';
+String project17des='🔸 Manage All data of Hospital.\n🔸 Manage Doctor & Staff Salary.\n🔸 Calculate All Expenses Of Patient.\n🔸 Strong Security System.\n🔸 Attractive User Interface.\n🔸 Shown Monthly Cost & Summary';
+String project18des='🔸 Store All info of FPI Students.\n🔸 Manage Students Information.\n🔸 Search Students Single & Multiple.\n🔸 Strong Security System.\n🔸 Attractive User Interface.\n🔸 Manage Students Result.';
+String project19des='🔸 This is a Email Sender .\n🔸 Strong Security System.\n🔸 Attractive User Interface.\n🔸 Smart Error Handling.';
 
 
 //blog data

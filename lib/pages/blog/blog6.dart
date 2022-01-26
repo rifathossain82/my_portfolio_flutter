@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class Blog6 extends StatelessWidget {
   Blog6({Key? key}) : super(key: key);
@@ -14,14 +15,15 @@ class Blog6 extends StatelessWidget {
         title: AutoSizeText(blog6_title),
       ),
       body: Padding(
-        padding: EdgeInsets.all(30.0),
+        padding: EdgeInsets.only(top: 30,right: 30,left: 30),
         child: ListView(
           children: [
             Image.asset('images/blog/flutter_supported.png',height: 250),
             SizedBox(height: 30,),
             title_view(blog6_detailsTitle1),
             description_view(blog6_detailsdes1),
-            SizedBox(height: 50,)
+            SizedBox(height: 50,),
+            footer(),
           ],
         ),
       ),
