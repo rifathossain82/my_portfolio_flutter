@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../widget/footer/footer.dart';
+
 class ProjectsPage extends StatefulWidget {
   const ProjectsPage({Key? key}) : super(key: key);
 
@@ -617,30 +619,6 @@ class _ProjectsPageState extends State<ProjectsPage> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget footer() {
-    return Column(
-      children: [
-        Divider(),
-        SizedBox(
-          height: 80,
-          child: Center(
-            child: RichText(
-              text: TextSpan(
-                  text: 'All Rights Reserved By ',
-                  style: GoogleFonts.ubuntu(color: Colors.grey),
-                  children: [
-                    TextSpan(
-                        text: 'officaialrifat82@gmail.com',
-                        style: GoogleFonts.ubuntu(
-                            color: Colors.red, fontStyle: FontStyle.italic))
-                  ]),
-            ),
-          ),
-        )
-      ],
     );
   }
 }

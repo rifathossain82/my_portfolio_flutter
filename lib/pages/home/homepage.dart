@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/widget/nabar/navbar.dart';
+import 'package:my_protfolio/widget/socialMediaIcon/SocialMediaIcon.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,7 +96,7 @@ class _HomepageState extends State<Homepage> {
         SizedBox(
           height: 44,
         ),
-        socialMediaIcon(),
+        showSocialMediaIcon_HomePage(context),
       ],
     );
   }
@@ -134,7 +135,7 @@ class _HomepageState extends State<Homepage> {
         SizedBox(
           height: 40,
         ),
-        socialMediaIcon(),
+        showSocialMediaIcon_HomePage(context),
       ],
     );
   }
@@ -157,46 +158,6 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
     );
-  }
-
-  Widget socialMediaIcon() {
-    return Row(
-      children: [
-        design_socialMediaIcon(fb_url, FontAwesomeIcons.facebookF),
-        SizedBox(width: 8,),
-        design_socialMediaIcon(twitter_url, FontAwesomeIcons.twitter),
-        SizedBox(width: 8,),
-        design_socialMediaIcon(instagram_url, FontAwesomeIcons.instagram),
-        SizedBox(width: 8,),
-        design_socialMediaIcon(linkedin_url, FontAwesomeIcons.linkedinIn),
-        SizedBox(width: 8,),
-        design_socialMediaIcon(github_url, FontAwesomeIcons.github)
-      ],
-    );
-  }
-
-  Widget design_socialMediaIcon(String url, IconData icon) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    final iconBorderColor =
-        themeProvider.isDarkMode ? Colors.white70 : Colors.grey;
-    return InkWell(
-        onTap: () {
-          _launchURL(url);
-        },
-        borderRadius: BorderRadius.circular(100),
-        child: Container(
-          height: 45,
-          width: 45,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            border: Border.all(color: iconBorderColor, width: 1),
-            borderRadius: BorderRadius.circular(100),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FaIcon(icon),
-          ),
-        ));
   }
 
   void _launchURL(String url) async {
@@ -303,6 +264,34 @@ class _HomepageState extends State<Homepage> {
         decoration: BoxDecoration(
           color: _color,
         ),
+      ),
+    );
+  }
+
+  Widget showSocialMediaIcon_HomePage(BuildContext context){
+    return SizedBox(
+      height: 50,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+        Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          design_socialMediaIcon(fb_url, FontAwesomeIcons.facebookF,context),
+          SizedBox(width: 8,),
+          design_socialMediaIcon(twitter_url, FontAwesomeIcons.twitter,context),
+          SizedBox(width: 8,),
+          design_socialMediaIcon(instagram_url, FontAwesomeIcons.instagram,context),
+          SizedBox(width: 8,),
+          design_socialMediaIcon(linkedin_url, FontAwesomeIcons.linkedinIn,context),
+          SizedBox(width: 8,),
+          design_socialMediaIcon(github_url, FontAwesomeIcons.github,context),
+          SizedBox(width: 8,),
+          design_socialMediaIcon(youTube_url, FontAwesomeIcons.youtube,context)
+        ],
+      ),
+        ],
       ),
     );
   }

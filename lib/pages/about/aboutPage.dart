@@ -9,6 +9,8 @@ import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../widget/footer/footer.dart';
+
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
 
@@ -444,30 +446,6 @@ class _AboutPageState extends State<AboutPage> {
           // ),
         ],
       ),
-    );
-  }
-
-  Widget footer() {
-    return Column(
-      children: [
-        Divider(),
-        SizedBox(
-          height: 80,
-          child: Center(
-            child: RichText(
-              text: TextSpan(
-                  text: 'All Rights Reserved By ',
-                  style: GoogleFonts.ubuntu(color: Colors.grey),
-                  children: [
-                    TextSpan(
-                        text: 'officaialrifat82@gmail.com',
-                        style: GoogleFonts.ubuntu(
-                            color: Colors.red, fontStyle: FontStyle.italic))
-                  ]),
-            ),
-          ),
-        )
-      ],
     );
   }
 }

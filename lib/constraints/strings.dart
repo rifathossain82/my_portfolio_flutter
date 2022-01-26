@@ -41,6 +41,7 @@ String instagram_url='https://www.instagram.com/rh_rifat220/';
 String linkedin_url='https://www.linkedin.com/in/rifat-hossain-66811b201/';
 String github_url='https://github.com/rifathossain82';
 String fiverr_url='https://www.fiverr.com/rifathossain82?up_rollout=true';
+String youTube_url='https://www.youtube.com/channel/UCHQjehNirRNYmWtYK0rh9jg';
 
 
 //chat dialog string
@@ -258,3 +259,32 @@ String blog5_detailsdes5='1. It still lacks some custom, platform-specific modul
 //blog6 details
 String blog6_detailsTitle1='How many platforms does Flutter support?';
 String blog6_detailsdes1='Flutter is an open-source UI software development kit created by Google. It is used to develop cross platform applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia,Web platform, and the web from a single codebase.';
+
+
+
+
+//contact data
+
+//address
+String address_Title='Address';
+String address_present_title='Present Address';
+String address_permanent_title='Permanent Address';
+String address_present='Doctor para, Feni, Chittagong, Bangladesh';
+String address_permanent='Kandughar, B-para, Comilla, Chittagong, Bangladesh';
+
+//hotline
+String hotline_Title='Hotline';
+String hotline_homeTitle='Office';
+String hotline_officie_title='Home';
+String hotline_whatsapp_title='Whatsapp';
+String hotline1='01882508771';
+String hotline2='01773619897';
+String hotline3='01585002495';
+
+//email
+String email_titile='Email';
+String email_official_titile='Official';
+String email_personal_titile='Personal';
+String email_1='officialrifat82@gmail.com';
+String email_2='rhrifat940279@gmail.com';
+String email_3='rh5256220@gmail.com';
