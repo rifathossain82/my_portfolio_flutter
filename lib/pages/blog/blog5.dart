@@ -20,7 +20,7 @@ class Blog5 extends StatelessWidget {
           children: [
             title_view('Flutter vs React Native'),
             description_view('When it comes to cross-platform mobile application development technology trends, both React Native and Flutter are pretty similar in terms of popularity, and both are still quite young (React Native was released in 2015, Flutter in 2017). Both technologies rank very high on GitHub with 71,9k stars (Flutter) and 79,6k (React Native).\n\nWe can see that the interest in Flutter has risen significantly in 2020 and is growing rapidly. '),
-            Image.asset('images/blog/flutter_react.png',height: 250),
+            Image.asset(blog5Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog5_detailsTitle1),
             description_view(blog5_detailsdes1),

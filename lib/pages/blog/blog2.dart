@@ -21,7 +21,7 @@ class Blog2 extends StatelessWidget {
           children: [
             title_view(blog2_title),
             description_view(blog2_des),
-            Image.asset('images/blog/flutter.png',height: 250),
+            Image.asset(blog2Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog2_detailsTitle1),
             description_view(blog2_detailsdes1),

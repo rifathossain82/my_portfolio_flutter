@@ -57,7 +57,7 @@ String heading_about='About me';
 String title_about1='who i am';
 String title_about2='my skills';
 String title_about3='my education';
-String title_about5='certified';
+String title_about5='courses';
 String title_about4='my photos';
 
 String content_about1Title="I'm Rifat and I'm a Apps Developer";
@@ -302,3 +302,60 @@ String email_personal_titile='Personal';
 String email_1='officialrifat82@gmail.com';
 String email_2='rhrifat940279@gmail.com';
 String email_3='rh5256220@gmail.com';
+
+
+
+//all images of app
+
+String app_icon='';
+
+//splashScreen
+String splashLottiImage='images/lotti_animation.json';
+
+//homepage
+String homepageImage='images/my_pic.JPG';
+
+//about page
+String my_pic2='images/myPic1.jpg';
+String my_skillsImage='images/aboutPage_image/skills.jpg';
+String my_eduImage='images/aboutPage_image/edu.png';
+String certifiedImage='images/aboutPage_image/courses.jpg';
+String cv_download_link='https://5wldbx4qhdyjcv1aedqp.000webhostapp.com/Rifat\'s%20CV.pdf';
+
+//project page (total project 19 (flutter,android, desktop))
+//flutter apps image
+String project1Img='images/projects_image/F_amarBangla.png';
+String project2Img='images/projects_image/F_bmi.png';
+String project3Img='images/projects_image/F_currencyConverter1.png';
+String project4Img='images/projects_image/F_currencyConverter2.png';
+String project5Img='images/projects_image/F_news.png';
+String project6Img='images/projects_image/F_qrCodeScaner.png';
+
+//android apps image
+String project7Img='images/projects_image/A_adorsholopi_logo.jpg';
+String project8Img='images/projects_image/A_beta_browser.jpg';
+String project9Img='images/projects_image/A_calculaotr_logo.jpg';
+String project10Img='images/projects_image/A_eshop.png';
+String project11Img='images/projects_image/A_scanner_por.jpg';
+String project12Img='images/projects_image/A_unique_trade_link.jpg';
+
+//desktop apps image
+String project13Img='images/projects_image/D_schoolManagement.jpg';
+String project14Img='images/projects_image/D_library.png';
+String project15Img='images/projects_image/D_inventorySystem.jpg';
+String project16Img='images/projects_image/D_hostelManagement.jpg';
+String project17Img='images/projects_image/D_hospitalManagement.jpg';
+String project18Img='images/projects_image/D_fpi_StudentInfo.png';
+String project19Img='images/projects_image/D_emailSender.jpg';
+
+
+//blog page
+String blog1Img='images/blog/dart.png';
+String blog2Img='images/blog/flutter.png';
+String blog3Img='images/blog/features.jpg';
+String blog4Img='images/blog/flutter_backend.png';
+String blog5Img='images/blog/flutter_react.png';
+String blog6Img='images/blog/flutter_supported.png';
+
+
+

@@ -10,6 +10,8 @@ class NavBar_Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //final themeprovider=Provider.of<ThemeProvider>(context);
+    //final _color=themeprovider.isDarkMode?Colors.white.withOpacity(0.9) : Color(0xFF212936);
     return Padding(
       padding: const EdgeInsets.only(left: 8),
       child: SizedBox(

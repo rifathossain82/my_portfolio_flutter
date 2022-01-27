@@ -20,7 +20,7 @@ class Blog1 extends StatelessWidget {
           children: [
             title_view(blog1_title),
             description_view(blog1_des),
-            Image.asset('images/blog/dart.png',height: 250),
+            Image.asset(blog1Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog_detailsTitle1),
             description_view(blog_detailsdes1),

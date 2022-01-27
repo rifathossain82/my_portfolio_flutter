@@ -19,7 +19,7 @@ class Blog3 extends StatelessWidget {
         child: ListView(
           children: [
             description_view('Here are 6 features of the cross-platform mobile app development framework:'),
-            Image.asset('images/blog/features.jpg',height: 250),
+            Image.asset(blog3Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog3_detailsTitle1),
             description_view(blog3_detailsdes1),

@@ -47,20 +47,20 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/F_amarBangla.png',
+                child: projects(project1Img,
                     project1Name, project1des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/F_bmi.png', project2Name,
+                child: projects(project2Img, project2Name,
                     project2des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
                 child: projects(
-                    'images/projects_image/F_currencyConverter1.png',
+                    project3Img,
                     project3Name,
                     project3des)),
           ],
@@ -72,20 +72,20 @@ class _ProjectsPageState extends State<ProjectsPage> {
           children: [
             Expanded(
                 child: projects(
-                    'images/projects_image/F_currencyConverter2.png',
+                    project4Img,
                     project4Name,
                     project4des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/F_news.png',
+                child: projects(project5Img,
                     project5Name, project5des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/F_qrCodeScaner.png',
+                child: projects(project6Img,
                     project6Name, project6des)),
           ],
         ),
@@ -102,19 +102,19 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/A_adorsholopi_logo.jpg',
+                child: projects(project7Img,
                     project7Name, project7des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_beta_browser.jpg',
+                child: projects(project8Img,
                     project8Name, project8des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_calculaotr_logo.jpg',
+                child: projects(project9Img,
                     project9Name, project9des)),
           ],
         ),
@@ -124,19 +124,19 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/A_eshop.png',
+                child: projects(project10Img,
                     project10Name, project10des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_scanner_por.jpg',
+                child: projects(project11Img,
                     project11Name, project11des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_unique_trade_link.jpg',
+                child: projects(project12Img,
                     project12Name, project12des)),
           ],
         ),
@@ -153,19 +153,19 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/D_schoolManagement.jpg',
+                child: projects(project13Img,
                     project13Name, project13des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_library.png',
+                child: projects(project14Img,
                     project14Name, project14des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_inventorySystem.jpg',
+                child: projects(project15Img,
                     project15Name, project15des)),
           ],
         ),
@@ -175,21 +175,21 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/D_hostelManagement.jpg',
+                child: projects(project16Img,
                     project16Name, project16des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
                 child: projects(
-                    'images/projects_image/D_hospitalManagement.jpg',
+                    project17Img,
                     project17Name,
                     project17des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_fpi_StudentInfo.png',
+                child: projects(project18Img,
                     project18Name, project18des)),
           ],
         ),
@@ -203,7 +203,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_emailSender.jpg',
+                child: projects(project19Img,
                     project19Name, project19des)),
             SizedBox(
               width: 10,
@@ -232,13 +232,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/F_amarBangla.png',
+                child: projects(project1Img,
                     project1Name, project1des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/F_bmi.png', project2Name,
+                child: projects(project2Img, project2Name,
                     project2des)),
           ],
         ),
@@ -249,7 +249,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
           children: [
             Expanded(
                 child: projects(
-                    'images/projects_image/F_currencyConverter1.png',
+                    project3Img,
                     project3Name,
                     project3des)),
             SizedBox(
@@ -257,7 +257,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
             ),
             Expanded(
                 child: projects(
-                    'images/projects_image/F_currencyConverter2.png',
+                    project4Img,
                     project4Name,
                     project4des)),
           ],
@@ -268,13 +268,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/F_news.png',
+                child: projects(project5Img,
                     project5Name, project5des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/F_qrCodeScaner.png',
+                child: projects(project6Img,
                     project6Name, project6des)),
           ],
         ),
@@ -291,13 +291,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/A_adorsholopi_logo.jpg',
+                child: projects(project7Img,
                     project7Name, project7des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_beta_browser.jpg',
+                child: projects(project8Img,
                     project8Name, project8des)),
           ],
         ),
@@ -307,13 +307,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/A_calculaotr_logo.jpg',
+                child: projects(project9Img,
                     project9Name, project9des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_eshop.png',
+                child: projects(project10Img,
                     project10Name, project10des)),
           ],
         ),
@@ -323,13 +323,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/A_scanner_por.jpg',
+                child: projects(project11Img,
                     project11Name, project11des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/A_unique_trade_link.jpg',
+                child: projects(project12Img,
                     project12Name, project12des)),
           ],
         ),
@@ -346,13 +346,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/D_schoolManagement.jpg',
+                child: projects(project13Img,
                     project13Name, project13des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_library.png',
+                child: projects(project14Img,
                     project14Name, project14des)),
           ],
         ),
@@ -362,13 +362,13 @@ class _ProjectsPageState extends State<ProjectsPage> {
         Row(
           children: [
             Expanded(
-                child: projects('images/projects_image/D_inventorySystem.jpg',
+                child: projects(project15Img,
                     project15Name, project15des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_hostelManagement.jpg',
+                child: projects(project16Img,
                     project16Name, project16des)),
           ],
         ),
@@ -379,14 +379,14 @@ class _ProjectsPageState extends State<ProjectsPage> {
           children: [
             Expanded(
                 child: projects(
-                    'images/projects_image/D_hospitalManagement.jpg',
+                    project17Img,
                     project17Name,
                     project17des)),
             SizedBox(
               width: 10,
             ),
             Expanded(
-                child: projects('images/projects_image/D_fpi_StudentInfo.png',
+                child: projects(project18Img,
                     project18Name, project18des)),
           ],
         ),
@@ -401,7 +401,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
             ),
             Expanded(
                 flex: 2,
-                child: projects('images/projects_image/D_emailSender.jpg',
+                child: projects(project19Img,
                     project19Name, project19des)),
             SizedBox(
               width: 10,
@@ -431,30 +431,30 @@ class _ProjectsPageState extends State<ProjectsPage> {
         SizedBox(
           height: 30,
         ),
-        projects('images/projects_image/F_amarBangla.png', project1Name,
+        projects(project1Img, project1Name,
             project1des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/F_bmi.png', project2Name, project2des),
+        projects(project2Img, project2Name, project2des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/F_currencyConverter1.png', project3Name,
+        projects(project3Img, project3Name,
             project3des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/F_currencyConverter2.png', project4Name,
+        projects(project4Img, project4Name,
             project4des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/F_news.png', project5Name, project5des),
+        projects(project5Img, project5Name, project5des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/F_qrCodeScaner.png', project6Name,
+        projects(project6Img, project6Name,
             project6des),
 
         SizedBox(
@@ -467,32 +467,32 @@ class _ProjectsPageState extends State<ProjectsPage> {
         SizedBox(
           height: 30,
         ),
-        projects('images/projects_image/A_adorsholopi_logo.jpg', project7Name,
+        projects(project7Img, project7Name,
             project7des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/A_beta_browser.jpg', project8Name,
+        projects(project8Img, project8Name,
             project8des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/A_calculaotr_logo.jpg', project9Name,
+        projects(project9Img, project9Name,
             project9des),
         SizedBox(
           height: 5,
         ),
         projects(
-            'images/projects_image/A_eshop.png', project10Name, project10des),
+           project10Img, project10Name, project10des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/A_scanner_por.jpg', project11Name,
+        projects(project11Img, project11Name,
             project11des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/A_unique_trade_link.jpg', project12Name,
+        projects(project12Img, project12Name,
             project12des),
 
         SizedBox(
@@ -505,37 +505,37 @@ class _ProjectsPageState extends State<ProjectsPage> {
         SizedBox(
           height: 30,
         ),
-        projects('images/projects_image/D_schoolManagement.jpg', project13Name,
+        projects(project13Img, project13Name,
             project13des),
         SizedBox(
           height: 5,
         ),
         projects(
-            'images/projects_image/D_library.png', project14Name, project14des),
+            project14Img, project14Name, project14des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/D_inventorySystem.jpg', project15Name,
+        projects(project15Img, project15Name,
             project15des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/D_hostelManagement.jpg', project16Name,
+        projects(project16Img, project16Name,
             project16des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/D_hospitalManagement.jpg',
+        projects(project17Img,
             project17Name, project17des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/D_fpi_StudentInfo.png', project18Name,
+        projects(project18Img, project18Name,
             project18des),
         SizedBox(
           height: 5,
         ),
-        projects('images/projects_image/D_emailSender.jpg', project19Name,
+        projects(project19Img, project19Name,
             project19des),
         SizedBox(
           height: 50,
@@ -566,7 +566,6 @@ class _ProjectsPageState extends State<ProjectsPage> {
             fontWeight: FontWeight.w300,
           ),
           textAlign: TextAlign.center,
-          maxLines: 3,
         ),
       ],
     );

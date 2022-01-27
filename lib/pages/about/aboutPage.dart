@@ -8,6 +8,7 @@ import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widget/footer/footer.dart';
 
@@ -22,10 +23,15 @@ var activeIndex=0;
 CarouselController controller=CarouselController();
 
 
+Color image_bg=Colors.grey.withOpacity(0.4);
+
+
 
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
+    final themeprovider=Provider.of<ThemeProvider>(context);
+    image_bg=themeprovider.isDarkMode?Colors.blueGrey.withOpacity(0.4):Colors.grey.withOpacity(0.4);
     return ScreenTypeLayout(
       mobile: Padding(
         padding: EdgeInsets.only(left: 20,bottom: 20,right: 8),
@@ -33,7 +39,7 @@ class _AboutPageState extends State<AboutPage> {
       ),
       tablet: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
-        child: desktop_layout(),
+        child: mobile_layout(),
       ),
       desktop: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -55,7 +61,7 @@ class _AboutPageState extends State<AboutPage> {
         ),
         Column(
           children: [
-            image('images/myPic1.jpg'),
+            image(my_pic2),
             SizedBox(
               height: 20,
             ),
@@ -72,7 +78,7 @@ class _AboutPageState extends State<AboutPage> {
         ),
         Column(
           children: [
-            image('images/aboutPage_image/skills.png'),
+            image(my_skillsImage),
             SizedBox(
               height: 20,
             ),
@@ -90,7 +96,7 @@ class _AboutPageState extends State<AboutPage> {
         ),
         Column(
           children: [
-            image('images/aboutPage_image/education2.png'),
+            image(my_eduImage),
             SizedBox(
               height: 80,
             ),
@@ -108,7 +114,7 @@ class _AboutPageState extends State<AboutPage> {
         ),
         Column(
           children: [
-            image('images/aboutPage_image/certified.jpg'),
+            image(certifiedImage),
             SizedBox(
               height: 80,
             ),
@@ -160,7 +166,7 @@ class _AboutPageState extends State<AboutPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(flex: 2, child: image('images/myPic1.jpg')),
+            Expanded(flex: 2, child: image(my_pic2)),
             SizedBox(
               width: 80,
             ),
@@ -183,7 +189,7 @@ class _AboutPageState extends State<AboutPage> {
             SizedBox(
               width: 80,
             ),
-            Expanded(flex:2,child: image('images/aboutPage_image/skills.png')),
+            Expanded(flex:2,child: image(my_skillsImage)),
           ],
         ),
 
@@ -198,7 +204,7 @@ class _AboutPageState extends State<AboutPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(flex:2,child: image('images/aboutPage_image/education2.png')),
+            Expanded(flex:2,child: image(my_eduImage)),
             SizedBox(
               width: 80,
             ),
@@ -222,7 +228,7 @@ class _AboutPageState extends State<AboutPage> {
             SizedBox(
               width: 80,
             ),
-            Expanded(flex:2,child: image('images/aboutPage_image/certified.jpg')),
+            Expanded(flex:2,child: image(certifiedImage)),
           ],
         ),
 
@@ -307,7 +313,9 @@ class _AboutPageState extends State<AboutPage> {
     return RaisedButton(
       color: Colors.blue,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-      onPressed: () {},
+      onPressed: () {
+        _launchURL(cv_download_link);       //000webhost e upload kora ache
+      },
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 26),
         child: Text(
@@ -320,12 +328,23 @@ class _AboutPageState extends State<AboutPage> {
       ),
     );
   }
+  
+  void _launchURL(String url) async {
+    if (!await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+      enableJavaScript: true,
+    )) {
+      throw 'Could not launch $url';
+    }
+  }
 
   Widget image(String image) {
     return Container(
       height: 350,
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.4),
+        color: image_bg,
           borderRadius: BorderRadius.circular(12),
           image: DecorationImage(
             fit: BoxFit.fitHeight,

@@ -1,11 +1,11 @@
 {
-    "name": "my_protfolio",
-    "short_name": "my_protfolio",
+    "name": "RIFAT HOSSAIN",
+    "short_name": "RIFAT HOSSAIN",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "I have 2 years of experience in Apps Development. I can develop native Android, Flutter, and Desktop applications. Since my start, I have worked over many Android and desktop Application projects for many clients and produced high-quality work. ",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

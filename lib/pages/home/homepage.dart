@@ -241,7 +241,7 @@ class _HomepageState extends State<Homepage> {
                   minRadius: 80,
                   maxRadius: 130,
                   backgroundImage: AssetImage(
-                    'images/my_pic.JPG',
+                    homepageImage,
                   ),
                 ),
               ),

@@ -18,7 +18,7 @@ class Blog6 extends StatelessWidget {
         padding: EdgeInsets.only(top: 30,right: 30,left: 30),
         child: ListView(
           children: [
-            Image.asset('images/blog/flutter_supported.png',height: 250),
+            Image.asset(blog6Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog6_detailsTitle1),
             description_view(blog6_detailsdes1),

@@ -20,7 +20,7 @@ class Blog4 extends StatelessWidget {
           children: [
             title_view('The Best BaaS for the Flutter App'),
             description_view('If you are curious about the topmost backend services for the flutter app, then you are at the right place. Here are some great backend options for the Flutter app.'),
-            Image.asset('images/blog/flutter_backend.png',height: 250),
+            Image.asset(blog4Img,height: 250),
             SizedBox(height: 30,),
             title_view(blog4_detailsTitle1),
             description_view(blog4_detailsdes1),
