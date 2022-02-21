@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/colors.dart';
+import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/pages/blog/blog1.dart';
 import 'package:my_protfolio/pages/blog/blog2.dart';
@@ -10,10 +10,6 @@ import 'package:my_protfolio/pages/blog/blog3.dart';
 import 'package:my_protfolio/pages/blog/blog4.dart';
 import 'package:my_protfolio/pages/blog/blog5.dart';
 import 'package:my_protfolio/pages/blog/blog6.dart';
-import 'package:my_protfolio/providers/themeProvider.dart';
-import 'package:provider/provider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../widget/footer/footer.dart';
 
 class BlogPage extends StatelessWidget {
@@ -28,20 +24,24 @@ class BlogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: Padding(
+    if (isMobile(context)) {
+      return Padding(
         padding: EdgeInsets.only(left: 20, bottom: 20, right: 8),
         child: mobile_layout(context),
-      ),
-      tablet: Padding(
+      );
+    }
+    else if (isTab(context)) {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: tablet_layout(context),
-      ),
-      desktop: Padding(
+      );
+    }
+    else {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: desktop_layout(context),
-      ),
-    );
+      );
+    }
   }
 
   Widget desktop_layout(BuildContext context){
@@ -141,7 +141,17 @@ class BlogPage extends StatelessWidget {
     return Container(
       height: 60,
       color: Colors.blueGrey.shade50,
-      child: Center(child: Text('Blog',style: GoogleFonts.poppins(fontSize: 26,fontWeight: FontWeight.w600,color: mainHexColor.withOpacity(0.8),letterSpacing: 1.5),),),
+      child: Center(
+        child: Text(
+          'Blog',
+          style: GoogleFonts.poppins(
+              fontSize: 26,
+              fontWeight: FontWeight.w600,
+              color: mainHexColor.withOpacity(0.8),
+              letterSpacing: 1.5
+          ),
+        ),
+      ),
     );
   }
 
@@ -161,25 +171,29 @@ class BlogPage extends StatelessWidget {
             children: [
               Expanded(flex:4,child: Image.asset(image,fit: BoxFit.cover,)),
               SizedBox(height: 10,),
-              Expanded(flex:8,child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(flex:2,
-                          child: AutoSizeText(title,style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.w400,),)),
-                      Expanded(flex:6,child: AutoSizeText(description,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w300),)),
-                      Expanded(child: Row(
-                        children: [
-                          Expanded(flex:3,child: TextButton(onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>blog));
-                          }, child: Text('Read more '))),
-                          Expanded(flex:4,child: AutoSizeText('By ${my_name}',style: GoogleFonts.poppins(fontSize: 13,fontStyle: FontStyle.italic,),textAlign: TextAlign.end,))
-                        ],
-                      ))
-                    ],
+              Expanded(
+                flex:8,
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(flex:2,child: AutoSizeText(title,style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.w400,),)),
+                        Expanded(flex:6,child: AutoSizeText(description,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w300),)),
+                        Expanded(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    flex:3,
+                                    child: TextButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>blog));},
+                                      child: Text('Read more '))
+                                ),
+                                Expanded(flex:4,child: AutoSizeText('By ${my_name}',style: GoogleFonts.poppins(fontSize: 13,fontStyle: FontStyle.italic,),textAlign: TextAlign.end,))
+                              ],
+                            ))
+                      ],
                   ),
-              ),
+                ),
               )
             ],
           ),

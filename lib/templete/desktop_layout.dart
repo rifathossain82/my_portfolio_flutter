@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
 import '../constraints/strings.dart';
 import '../locator.dart';
 import '../routing/router.dart';
@@ -22,13 +20,16 @@ class Desktop_Layout extends StatelessWidget {
             Expanded(
                 child: Column(
                   children: [
-                    Expanded(child: Navigator(
-                      key: locator<NavigationServices>().navigatorKey,
-                      onGenerateRoute: generateRoute,
-                      initialRoute: HomeRoute,
-                    ))
+                    Expanded(
+                        child: Navigator(
+                          key: locator<NavigationServices>().navigatorKey,
+                          onGenerateRoute: generateRoute,
+                          initialRoute: HomeRoute,
+                        ),
+                    )
                   ],
-                ))
+                ),
+            ),
           ],
         ),
       ),

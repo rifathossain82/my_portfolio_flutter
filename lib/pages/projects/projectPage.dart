@@ -1,10 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../widget/footer/footer.dart';
 
 class ProjectsPage extends StatefulWidget {
@@ -16,23 +14,26 @@ class ProjectsPage extends StatefulWidget {
 
 class _ProjectsPageState extends State<ProjectsPage> {
   bool isHovered = false;
-
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: Padding(
-        padding: EdgeInsets.only(left: 20, bottom: 20, right: 8),
-        child: mobile_layout(),
-      ),
-      tablet: Padding(
+    if (isMobile(context)) {
+      return Padding(
+          padding: EdgeInsets.only(left: 20, bottom: 20, right: 8),
+          child: mobile_layout(),
+      );
+    }
+    else if (isTab(context)) {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: tablet_layout(),
-      ),
-      desktop: Padding(
+      );
+    }
+    else {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: desktop_layout(),
-      ),
-    );
+      );
+    }
   }
 
   Widget desktop_layout() {
@@ -40,180 +41,188 @@ class _ProjectsPageState extends State<ProjectsPage> {
       children: [
         //section flutter
         Center(
-            child: section_title(sectionTitle1_project, sectionDes1_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle1_project, sectionDes1_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project1Img,
-                    project1Name, project1des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project1Img,
+                    project1Name,
+                    project1des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project2Img, project2Name,
-                    project2des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project2Img,
+                    project2Name,
+                    project2des)
             ),
+            SizedBox(width: 10,),
             Expanded(
                 child: projects(
                     project3Img,
                     project3Name,
-                    project3des)),
+                    project3des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
                 child: projects(
                     project4Img,
                     project4Name,
-                    project4des)),
-            SizedBox(
-              width: 10,
+                    project4des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project5Img,
-                    project5Name, project5des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project5Img,
+                    project5Name,
+                    project5des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project6Img,
-                    project6Name, project6des)),
+                child: projects(
+                    project6Img,
+                    project6Name,
+                    project6des)
+            ),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         //section android
         Center(
-            child: section_title(sectionTitle2_project, sectionDes2_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle2_project, sectionDes2_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project7Img,
-                    project7Name, project7des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project7Img,
+                    project7Name,
+                    project7des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project8Img,
-                    project8Name, project8des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project8Img,
+                    project8Name,
+                    project8des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project9Img,
-                    project9Name, project9des)),
+                child: projects(
+                    project9Img,
+                    project9Name,
+                    project9des)
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project10Img,
-                    project10Name, project10des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project10Img,
+                    project10Name,
+                    project10des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project11Img,
-                    project11Name, project11des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project11Img,
+                    project11Name,
+                    project11des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project12Img,
-                    project12Name, project12des)),
+                child: projects(
+                    project12Img,
+                    project12Name,
+                    project12des)
+            ),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         //section desktop
         Center(
-            child: section_title(sectionTitle3_project, sectionDes3_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle3_project, sectionDes3_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project13Img,
-                    project13Name, project13des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project13Img,
+                    project13Name,
+                    project13des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project14Img,
-                    project14Name, project14des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project14Img,
+                    project14Name,
+                    project14des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project15Img,
-                    project15Name, project15des)),
+                child: projects(
+                    project15Img,
+                    project15Name,
+                    project15des)
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project16Img,
-                    project16Name, project16des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project16Img,
+                    project16Name,
+                    project16des)
             ),
+            SizedBox(width: 10,),
             Expanded(
                 child: projects(
                     project17Img,
                     project17Name,
-                    project17des)),
-            SizedBox(
-              width: 10,
+                    project17des)
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project18Img,
-                    project18Name, project18des)),
+                child: projects(
+                    project18Img,
+                    project18Name,
+                    project18des)
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(child: Center()),
-            SizedBox(
-              width: 10,
-            ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project19Img,
-                    project19Name, project19des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project19Img,
+                    project19Name,
+                    project19des)
             ),
+            SizedBox(width: 10,),
             Expanded(child: Center()),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         footer(),
       ],
@@ -225,193 +234,217 @@ class _ProjectsPageState extends State<ProjectsPage> {
       children: [
         //section flutter
         Center(
-            child: section_title(sectionTitle1_project, sectionDes1_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle1_project, sectionDes1_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project1Img,
-                    project1Name, project1des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project1Img,
+                    project1Name, project1des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project2Img, project2Name,
-                    project2des)),
+                child: projects(
+                    project2Img,
+                    project2Name,
+                    project2des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
                 child: projects(
                     project3Img,
                     project3Name,
-                    project3des)),
-            SizedBox(
-              width: 10,
+                    project3des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
                 child: projects(
                     project4Img,
                     project4Name,
-                    project4des)),
+                    project4des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project5Img,
-                    project5Name, project5des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project5Img,
+                    project5Name,
+                    project5des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project6Img,
-                    project6Name, project6des)),
+                child: projects(
+                    project6Img,
+                    project6Name,
+                    project6des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         //section android
         Center(
-            child: section_title(sectionTitle2_project, sectionDes2_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle2_project, sectionDes2_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project7Img,
-                    project7Name, project7des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project7Img,
+                    project7Name,
+                    project7des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project8Img,
-                    project8Name, project8des)),
+                child: projects(
+                    project8Img,
+                    project8Name,
+                    project8des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project9Img,
-                    project9Name, project9des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project9Img,
+                    project9Name,
+                    project9des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project10Img,
-                    project10Name, project10des)),
+                child: projects(
+                    project10Img,
+                    project10Name,
+                    project10des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project11Img,
-                    project11Name, project11des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project11Img,
+                    project11Name,
+                    project11des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project12Img,
-                    project12Name, project12des)),
+                child: projects(
+                    project12Img,
+                    project12Name,
+                    project12des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         //section desktop
         Center(
-            child: section_title(sectionTitle3_project, sectionDes3_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle3_project, sectionDes3_project)
         ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project13Img,
-                    project13Name, project13des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project13Img,
+                    project13Name,
+                    project13des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project14Img,
-                    project14Name, project14des)),
+                child: projects(
+                    project14Img,
+                    project14Name,
+                    project14des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
-                child: projects(project15Img,
-                    project15Name, project15des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project15Img,
+                    project15Name,
+                    project15des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project16Img,
-                    project16Name, project16des)),
+                child: projects(
+                    project16Img,
+                    project16Name,
+                    project16des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(
                 child: projects(
                     project17Img,
                     project17Name,
-                    project17des)),
-            SizedBox(
-              width: 10,
+                    project17des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(
-                child: projects(project18Img,
-                    project18Name, project18des)),
+                child: projects(
+                    project18Img,
+                    project18Name,
+                    project18des
+                )
+            ),
           ],
         ),
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Row(
           children: [
             Expanded(flex: 1, child: Center()),
-            SizedBox(
-              width: 10,
-            ),
+            SizedBox(width: 10,),
             Expanded(
                 flex: 2,
-                child: projects(project19Img,
-                    project19Name, project19des)),
-            SizedBox(
-              width: 10,
+                child: projects(
+                    project19Img,
+                    project19Name,
+                    project19des
+                )
             ),
+            SizedBox(width: 10,),
             Expanded(flex: 1, child: Center()),
           ],
         ),
-        SizedBox(
-          height: 100,
-        ),
+        SizedBox(height: 100,),
 
         footer(),
       ],
@@ -421,125 +454,63 @@ class _ProjectsPageState extends State<ProjectsPage> {
   Widget mobile_layout() {
     return ListView(
       children: [
-        SizedBox(
-          height: 10,
-        ),
+        SizedBox(height: 10,),
 
         //section flutter
         Center(
-            child: section_title(sectionTitle1_project, sectionDes1_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle1_project, sectionDes1_project)
         ),
-        projects(project1Img, project1Name,
-            project1des),
-        SizedBox(
-          height: 5,
-        ),
+        SizedBox(height: 30,),
+        projects(project1Img, project1Name, project1des),
+        SizedBox(height: 5,),
         projects(project2Img, project2Name, project2des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project3Img, project3Name,
-            project3des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project4Img, project4Name,
-            project4des),
-        SizedBox(
-          height: 5,
-        ),
+        SizedBox(height: 5,),
+        projects(project3Img, project3Name, project3des),
+        SizedBox(height: 5,),
+        projects(project4Img, project4Name, project4des),
+        SizedBox(height: 5,),
         projects(project5Img, project5Name, project5des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project6Img, project6Name,
-            project6des),
+        SizedBox(height: 5,),
+        projects(project6Img, project6Name, project6des),
 
-        SizedBox(
-          height: 60,
-        ),
+        SizedBox(height: 60,),
 
         //section android
         Center(
-            child: section_title(sectionTitle2_project, sectionDes2_project)),
-        SizedBox(
-          height: 30,
+            child: section_title(sectionTitle2_project, sectionDes2_project)
         ),
-        projects(project7Img, project7Name,
-            project7des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project8Img, project8Name,
-            project8des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project9Img, project9Name,
-            project9des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(
-           project10Img, project10Name, project10des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project11Img, project11Name,
-            project11des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project12Img, project12Name,
-            project12des),
+        SizedBox(height: 30,),
+        projects(project7Img, project7Name, project7des),
+        SizedBox(height: 5,),
+        projects(project8Img, project8Name, project8des),
+        SizedBox(height: 5,),
+        projects(project9Img, project9Name, project9des),
+        SizedBox(height: 5,),
+        projects(project10Img, project10Name, project10des),
+        SizedBox(height: 5,),
+        projects(project11Img, project11Name, project11des),
+        SizedBox(height: 5,),
+        projects(project12Img, project12Name, project12des),
 
-        SizedBox(
-          height: 60,
-        ),
+        SizedBox(height: 60,),
 
         //section desktop
-        Center(
-            child: section_title(sectionTitle3_project, sectionDes3_project)),
-        SizedBox(
-          height: 30,
-        ),
-        projects(project13Img, project13Name,
-            project13des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(
-            project14Img, project14Name, project14des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project15Img, project15Name,
-            project15des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project16Img, project16Name,
-            project16des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project17Img,
-            project17Name, project17des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project18Img, project18Name,
-            project18des),
-        SizedBox(
-          height: 5,
-        ),
-        projects(project19Img, project19Name,
-            project19des),
-        SizedBox(
-          height: 50,
-        ),
+        Center(child: section_title(sectionTitle3_project, sectionDes3_project)),
+        SizedBox(height: 30,),
+        projects(project13Img, project13Name, project13des),
+        SizedBox(height: 5,),
+        projects(project14Img, project14Name, project14des),
+        SizedBox(height: 5,),
+        projects(project15Img, project15Name, project15des),
+        SizedBox(height: 5,),
+        projects(project16Img, project16Name, project16des),
+        SizedBox(height: 5,),
+        projects(project17Img, project17Name, project17des),
+        SizedBox(height: 5,),
+        projects(project18Img, project18Name, project18des),
+        SizedBox(height: 5,),
+        projects(project19Img, project19Name, project19des),
+        SizedBox(height: 50,),
 
         footer(),
       ],
@@ -553,19 +524,20 @@ class _ProjectsPageState extends State<ProjectsPage> {
       children: [
         Text(
           title,
+          textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
               fontSize: 32,
               fontWeight: FontWeight.w500,
-              color: Colors.red.shade500),
-          textAlign: TextAlign.center,
+              color: Colors.red.shade500
+          ),
         ),
         AutoSizeText(
           des,
+          textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
             fontSize: 15,
             fontWeight: FontWeight.w300,
           ),
-          textAlign: TextAlign.center,
         ),
       ],
     );
@@ -593,28 +565,28 @@ class _ProjectsPageState extends State<ProjectsPage> {
                   child: Image.asset(
                     appImage,
                     fit: BoxFit.cover,
-                  )),
-              SizedBox(
-                height: 5,
+                  )
               ),
+              SizedBox(height: 5,),
               Expanded(
                   flex: 1,
                   child: Text(
                     appName,
                     style: GoogleFonts.poppins(
-                        fontSize: 20, fontWeight: FontWeight.w700),
-                  )),
+                        fontSize: 20, fontWeight: FontWeight.w700
+                    ),
+                  )
+              ),
               Expanded(
                   flex: 3,
                   child: AutoSizeText(
                     appDescription,
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w400,
-                    ),
+                    style: GoogleFonts.poppins(fontWeight: FontWeight.w400,),
                     minFontSize: 14,
                     maxFontSize: 20,
                     maxLines: 5,
-                  )),
+                  )
+              ),
             ],
           ),
         ),

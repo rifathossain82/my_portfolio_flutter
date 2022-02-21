@@ -1,15 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:provider/provider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../widget/footer/footer.dart';
 
 class AboutPage extends StatefulWidget {
@@ -22,49 +19,44 @@ class AboutPage extends StatefulWidget {
 var activeIndex=0;
 CarouselController controller=CarouselController();
 
-
 Color image_bg=Colors.grey.withOpacity(0.4);
-
-
 
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     final themeprovider=Provider.of<ThemeProvider>(context);
     image_bg=themeprovider.isDarkMode?Colors.blueGrey.withOpacity(0.4):Colors.grey.withOpacity(0.4);
-    return ScreenTypeLayout(
-      mobile: Padding(
+    if (isMobile(context)) {
+      return Padding(
         padding: EdgeInsets.only(left: 20,bottom: 20,right: 8),
         child: mobile_layout(),
-      ),
-      tablet: Padding(
+      );
+    }
+    else if (isTab(context)) {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: mobile_layout(),
-      ),
-      desktop: Padding(
+      );
+    }
+    else {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: desktop_layout(),
-      ),
-    );
+      );
+    }
   }
 
   Widget mobile_layout() {
     return ListView(
       children: [
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         //section who i am
         Center(child: title_text(title_about1)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Column(
           children: [
             image(my_pic2),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20,),
             content(description),
           ],
         ),
@@ -73,15 +65,11 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my skills
         Center(child: title_text(title_about2)),
-        SizedBox(
-          height: 40,
-        ),
+        SizedBox(height: 40,),
         Column(
           children: [
             image(my_skillsImage),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20,),
             my_skills(),
           ],
         ),
@@ -91,15 +79,11 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my education
         Center(child: title_text(title_about3)),
-        SizedBox(
-          height: 40,
-        ),
+        SizedBox(height: 40,),
         Column(
           children: [
             image(my_eduImage),
-            SizedBox(
-              height: 80,
-            ),
+            SizedBox(height: 80,),
             myEducation(),
           ],
         ),
@@ -109,15 +93,11 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my certified
         Center(child: title_text(title_about5)),
-        SizedBox(
-          height: 40,
-        ),
+        SizedBox(height: 40,),
         Column(
           children: [
             image(certifiedImage),
-            SizedBox(
-              height: 80,
-            ),
+            SizedBox(height: 80,),
             myCertificate(),
           ],
         ),
@@ -126,9 +106,7 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my photos
         Center(child: title_text(title_about4)),
-        SizedBox(
-          height: 40,
-        ),
+        SizedBox(height: 40,),
         Column(
           children: [
             myImage_carousel()
@@ -138,9 +116,6 @@ class _AboutPageState extends State<AboutPage> {
 
         SizedBox(height: 50,),
         footer(),
-
-
-
       ],
     );
   }
@@ -148,28 +123,23 @@ class _AboutPageState extends State<AboutPage> {
   Widget desktop_layout() {
     return ListView(
       children: [
-        SizedBox(
-          height: 30,
-        ),
+        SizedBox(height: 30,),
         Center(
             child: Text(
-          heading_about,
-          style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 42),
-        )),
+              heading_about,
+              style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 42),
+            ),
+        ),
 
         //section who i am
         Center(child: title_text(title_about1)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(flex: 2, child: image(my_pic2)),
-            SizedBox(
-              width: 80,
-            ),
+            SizedBox(width: 80,),
             Expanded(flex:3,child: content(description)),
           ],
         ),
@@ -178,17 +148,13 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my skills
         Center(child: title_text(title_about2)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(flex:3,child: my_skills()),
-            SizedBox(
-              width: 80,
-            ),
+            SizedBox(width: 80,),
             Expanded(flex:2,child: image(my_skillsImage)),
           ],
         ),
@@ -197,17 +163,13 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my education
         Center(child: title_text(title_about3)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(flex:2,child: image(my_eduImage)),
-            SizedBox(
-              width: 80,
-            ),
+            SizedBox(width: 80,),
             Expanded(flex:3,child: myEducation()),
           ],
         ),
@@ -217,17 +179,13 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my certified
         Center(child: title_text(title_about5)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(flex:3,child: myCertificate()),
-            SizedBox(
-              width: 80,
-            ),
+            SizedBox(width: 80,),
             Expanded(flex:2,child: image(certifiedImage)),
           ],
         ),
@@ -236,9 +194,7 @@ class _AboutPageState extends State<AboutPage> {
 
         //section my photo
         Center(child: title_text(title_about4)),
-        SizedBox(
-          height: 50,
-        ),
+        SizedBox(height: 50,),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -254,10 +210,8 @@ class _AboutPageState extends State<AboutPage> {
 
   Widget title_text(String title) {
     final themeprovider = Provider.of<ThemeProvider>(context);
-    final title_containerColor =
-        themeprovider.isDarkMode ? Colors.grey : Color(0xFF212936);
-    final titleColor =
-        themeprovider.isDarkMode ? Colors.white70 : Colors.red.shade700;
+    final title_containerColor =themeprovider.isDarkMode ? Colors.grey : Color(0xFF212936);
+    final titleColor =themeprovider.isDarkMode ? Colors.white70 : Colors.red.shade700;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -294,16 +248,12 @@ class _AboutPageState extends State<AboutPage> {
           content_about1Title,
           style: GoogleFonts.poppins(fontSize: 26, fontWeight: FontWeight.w500),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: 20,),
         Text(
           content,
           style: GoogleFonts.poppins(),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: 20,),
         download_cv(),
       ],
     );
@@ -323,7 +273,8 @@ class _AboutPageState extends State<AboutPage> {
           style: GoogleFonts.poppins(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: Colors.white.withOpacity(0.9)),
+              color: Colors.white.withOpacity(0.9)
+          ),
         ),
       ),
     );
@@ -335,7 +286,8 @@ class _AboutPageState extends State<AboutPage> {
       forceSafariVC: true,
       forceWebView: true,
       enableJavaScript: true,
-    )) {
+    ))
+    {
       throw 'Could not launch $url';
     }
   }
@@ -351,7 +303,8 @@ class _AboutPageState extends State<AboutPage> {
             image: AssetImage(
               image,
             ),
-          )),
+          )
+      ),
     );
   }
 
@@ -391,10 +344,8 @@ class _AboutPageState extends State<AboutPage> {
 
   Widget skills_body(String name){
     final themeprovider = Provider.of<ThemeProvider>(context);
-    final bg_color=
-    themeprovider.isDarkMode ? Colors.white70 : Colors.blueGrey;
-    final text_color =
-    themeprovider.isDarkMode ? Color(0xFF212936) : Colors.white;
+    final bg_color= themeprovider.isDarkMode ? Colors.white70 : Colors.blueGrey;
+    final text_color = themeprovider.isDarkMode ? Color(0xFF212936) : Colors.white;
 
     return Container(
       height: 70,
@@ -403,10 +354,18 @@ class _AboutPageState extends State<AboutPage> {
         borderRadius: BorderRadius.circular(12),
         color: bg_color,
       ),
-      child: Center(child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 2),
-        child: AutoSizeText(name,style: GoogleFonts.poppins(color: text_color),textAlign: TextAlign.center,minFontSize: 4,maxLines: 1,),
-      ),),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 2),
+          child: AutoSizeText(
+            name,
+            style: GoogleFonts.poppins(color: text_color),
+            textAlign: TextAlign.center,
+            minFontSize: 4,
+            maxLines: 1,
+          ),
+        ),
+      ),
     );
   }
   
@@ -492,9 +451,8 @@ class _AboutPageState extends State<AboutPage> {
                       image: AssetImage(my_images[index]),
                       fit: BoxFit.cover,
                     )
-
                   ),
-                  );
+                );
               },
               options: CarouselOptions(
                   initialPage: 0,

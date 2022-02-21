@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
-import 'package:my_protfolio/services/navigationServices.dart';
 import 'package:my_protfolio/widget/ligh_dark/light_dark.dart';
 import 'package:my_protfolio/widget/nabar/navbar_item.dart';
 import 'package:my_protfolio/widget/nabar/navbar_logo.dart';
 
 class Nav_Bar extends StatelessWidget {
   Nav_Bar({Key? key}) : super(key: key);
-
   double sizedBox_width=10;
 
   @override

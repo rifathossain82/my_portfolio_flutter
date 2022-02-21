@@ -23,14 +23,11 @@ class MyTheme {
     iconTheme: IconThemeData(color: Colors.white70),
     appBarTheme: AppBarTheme(color: Colors.black.withOpacity(0.1)),
     drawerTheme: DrawerThemeData(backgroundColor: Colors.red),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.white,
-    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData( backgroundColor: Colors.white,),
     navigationRailTheme: NavigationRailThemeData(
       backgroundColor: Color(0xFF212936),
       selectedIconTheme: IconThemeData(color: Colors.blue, size: 40),
-      unselectedIconTheme:
-          IconThemeData(color: Colors.blue.withOpacity(0.5), size: 35),
+      unselectedIconTheme: IconThemeData(color: Colors.blue.withOpacity(0.5), size: 35),
     ),
   );
 
@@ -42,13 +39,12 @@ class MyTheme {
       iconTheme: IconThemeData(color: Colors.black.withOpacity(0.8)),
       appBarTheme: AppBarTheme(color: Colors.blue),
       drawerTheme: DrawerThemeData(backgroundColor: Colors.green),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: Color(0xFF212936),
-      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData( backgroundColor: Color(0xFF212936),),
       navigationRailTheme: NavigationRailThemeData(
         backgroundColor: Colors.white,
         selectedIconTheme: IconThemeData(color: Colors.blue, size: 40),
         unselectedIconTheme:
             IconThemeData(color: Colors.blue.withOpacity(0.5), size: 35),
-      ));
+      )
+  );
 }

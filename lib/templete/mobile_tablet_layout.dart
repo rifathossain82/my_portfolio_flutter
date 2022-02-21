@@ -5,10 +5,7 @@ import 'package:my_protfolio/pages/blog/blogpage.dart';
 import 'package:my_protfolio/pages/contact/contactPage.dart';
 import 'package:my_protfolio/pages/home/homepage.dart';
 import 'package:my_protfolio/pages/projects/projectPage.dart';
-import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:my_protfolio/widget/ligh_dark/light_dark.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 
 class Mobile_TebletLayout extends StatefulWidget {
   Mobile_TebletLayout({Key? key}) : super(key: key);
@@ -85,7 +82,7 @@ class _Mobile_TebletLayoutState extends State<Mobile_TebletLayout> {
                 appbarName=appBar_name[index];
               });
             },
-            ),
+          ),
           Expanded(child: Container(child: Center(child: pages[index]),))
         ],
       ),

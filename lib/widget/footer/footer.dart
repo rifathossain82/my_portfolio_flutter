@@ -17,8 +17,10 @@ Widget footer() {
                   TextSpan(
                       text: 'officaialrifat82@gmail.com',
                       style: GoogleFonts.ubuntu(
-                          color: Colors.red, fontStyle: FontStyle.italic))
-                ]),
+                          color: Colors.red, fontStyle: FontStyle.italic)
+                  ),
+                ]
+            ),
           ),
         ),
       )

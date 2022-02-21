@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/constraints/strings.dart';
-import 'package:my_protfolio/pages/home/homepage.dart';
 import 'package:my_protfolio/pages/splashScreen/splash_screen.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
-import 'package:my_protfolio/templete/layoutTemplete.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:provider/provider.dart';
 

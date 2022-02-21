@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
 import 'package:my_protfolio/services/send_email.dart';
-import 'package:my_protfolio/widget/nabar/navbar.dart';
 import 'package:provider/provider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import '../widget/centeredView/centeredView.dart';
 import 'desktop_layout.dart';
 import 'mobile_tablet_layout.dart';
 
@@ -21,23 +18,17 @@ class LayoutTemplete extends StatefulWidget {
 
 class _LayoutTempleteState extends State<LayoutTemplete> {
   Color dialog_bg = Colors.white;
-
   Color dialog_text = Colors.white;
-
   Color dialog_border = Colors.white;
-
   final formKey = GlobalKey<FormState>();
 
   TextEditingController controller_name=TextEditingController();
-
   TextEditingController controller_email=TextEditingController();
-
   TextEditingController controller_message=TextEditingController();
 
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     controller_name.clear();
     controller_email.clear();
@@ -47,18 +38,13 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final color_icon =
-    themeProvider.isDarkMode ? Colors.grey[900] : Colors.grey[50];
-    dialog_bg = (themeProvider.isDarkMode ? Colors.white : Color(0xFF212936))!;
-    dialog_text =
-    (themeProvider.isDarkMode ? Color(0xFF212936) : Colors.white)!;
+    final color_icon = themeProvider.isDarkMode ? Colors.grey[900] : Colors.grey[50];
+    dialog_bg = (themeProvider.isDarkMode ? Colors.white : Color(0xFF212936));
+    dialog_text = (themeProvider.isDarkMode ? Color(0xFF212936) : Colors.white);
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: ScreenTypeLayout(
-        mobile: Mobile_TebletLayout(),
-        tablet: Mobile_TebletLayout(),
-        desktop: Desktop_Layout(),
-      ),
+      body: isDesktop(context)?Desktop_Layout():Mobile_TebletLayout(),
       floatingActionButton: FloatingActionButton(
         tooltip: dialog_title,
         child: Icon(
@@ -130,7 +116,7 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   Widget dialogTextField_name() {
     return TextFormField(
       validator: (value) {
-        if (value!.isEmpty || !RegExp(r'^[a-z A-Z]+$').hasMatch(value!)) {
+        if (value!.isEmpty || !RegExp(r'^[a-z A-Z]+$').hasMatch(value)) {
           return 'Please, Enter correct information!';
         }
         else {
@@ -153,12 +139,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
               borderSide: BorderSide(color: dialog_text)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: dialog_text)
-          ),
+              borderSide: BorderSide(color: dialog_text)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.red)
-          ),
+              borderSide: BorderSide(color: Colors.red)),
           labelText: name_field,
           labelStyle: TextStyle(color: dialog_text)),
     );
@@ -190,12 +174,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
               borderSide: BorderSide(color: dialog_text)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: dialog_text)
-          ),
+              borderSide: BorderSide(color: dialog_text)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.red)
-          ),
+              borderSide: BorderSide(color: Colors.red)),
           labelText: email_field,
           labelStyle: TextStyle(color: dialog_text)),
     );
@@ -227,12 +209,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
               borderSide: BorderSide(color: dialog_text)),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: dialog_text)
-          ),
+              borderSide: BorderSide(color: dialog_text)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.red)
-          ),
+              borderSide: BorderSide(color: Colors.red)),
           labelText: comment_field,
           labelStyle: TextStyle(color: dialog_text)),
     );

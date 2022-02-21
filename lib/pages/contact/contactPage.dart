@@ -2,13 +2,10 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/widget/socialMediaIcon/SocialMediaIcon.dart';
-import 'package:provider/provider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import '../../providers/themeProvider.dart';
 import '../../widget/footer/footer.dart';
 
 class ContactPage extends StatelessWidget {
@@ -16,20 +13,24 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: Padding(
+    if (isMobile(context)) {
+      return Padding(
         padding: EdgeInsets.only(left: 20, bottom: 20, right: 8),
         child: mobile_layout(context),
-      ),
-      tablet: Padding(
+      );
+    }
+    else if (isTab(context)) {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: mobile_layout(context),
-      ),
-      desktop: Padding(
+      );
+    }
+    else {
+      return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         child: desktop_layout(context),
-      ),
-    );
+      );
+    }
   }
 
   Widget desktop_layout(BuildContext context){
@@ -91,7 +92,8 @@ class ContactPage extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 26,
                       fontWeight: FontWeight.w600,
-                    )),
+                    )
+                ),
               ],
             )
         ),
@@ -126,10 +128,12 @@ class ContactPage extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 26,
                       fontWeight: FontWeight.w600,
-                    )),
+                    ),
+                ),
               ],
             )
-        ),Divider(),
+        ),
+        Divider(),
         SizedBox(height: 10,),
         AutoSizeText(hotline_officie_title,style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.w500),),
         InkWell(onTap: (){_makeCall(hotline1);},child: AutoSizeText(hotline1,style: GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w300),)),
@@ -164,7 +168,8 @@ class ContactPage extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 26,
                       fontWeight: FontWeight.w600,
-                    )),
+                    ),
+                ),
               ],
             )
         ),
@@ -197,23 +202,23 @@ class ContactPage extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-        Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          design_socialMediaIcon(fb_url, FontAwesomeIcons.facebookF,context),
-          SizedBox(width: 8,),
-          design_socialMediaIcon(twitter_url, FontAwesomeIcons.twitter,context),
-          SizedBox(width: 8,),
-          design_socialMediaIcon(instagram_url, FontAwesomeIcons.instagram,context),
-          SizedBox(width: 8,),
-          design_socialMediaIcon(linkedin_url, FontAwesomeIcons.linkedinIn,context),
-          SizedBox(width: 8,),
-          design_socialMediaIcon(github_url, FontAwesomeIcons.github,context),
-          SizedBox(width: 8,),
-          design_socialMediaIcon(youTube_url, FontAwesomeIcons.youtube,context)
-        ],
-      )
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              design_socialMediaIcon(fb_url, FontAwesomeIcons.facebookF,context),
+              SizedBox(width: 8,),
+              design_socialMediaIcon(twitter_url, FontAwesomeIcons.twitter,context),
+              SizedBox(width: 8,),
+              design_socialMediaIcon(instagram_url, FontAwesomeIcons.instagram,context),
+              SizedBox(width: 8,),
+              design_socialMediaIcon(linkedin_url, FontAwesomeIcons.linkedinIn,context),
+              SizedBox(width: 8,),
+              design_socialMediaIcon(github_url, FontAwesomeIcons.github,context),
+              SizedBox(width: 8,),
+              design_socialMediaIcon(youTube_url, FontAwesomeIcons.youtube,context)
+            ] ,
+          )
         ],
       ),
     );

@@ -9,7 +9,6 @@ class Blog6 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: AutoSizeText(blog6_title),

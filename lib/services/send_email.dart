@@ -4,12 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:overlay_support/overlay_support.dart';
 
-Future sendEmail(
-    {required String name,
-      required String email,
-      required String subject,
-      required String message})
-async {
+Future sendEmail({required String name, required String email, required String subject, required String message}) async {
 
   final servicesId='service_a2d9rke';
   final templeteId='template_thtfyb8';

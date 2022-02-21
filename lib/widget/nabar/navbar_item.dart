@@ -14,7 +14,6 @@ class NavBar_Item extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(100),
         onTap: (){
-
           locator<NavigationServices>().navigateTo(navigatePath);
         },
         child: Padding(
@@ -23,6 +22,7 @@ class NavBar_Item extends StatelessWidget {
             item,
             style: TextStyle(fontSize: 18,),
           ),
-        ));
+        )
+    );
   }
 }
