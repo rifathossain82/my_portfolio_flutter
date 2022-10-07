@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 
-import '../../widget/footer/footer.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class Blog2 extends StatelessWidget {
   Blog2({Key? key}) : super(key: key);

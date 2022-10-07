@@ -5,9 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/providers/themeProvider.dart';
+import 'package:my_protfolio/widget/custom_scroll_behavior.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../widget/footer/footer.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -47,164 +48,198 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   Widget mobile_layout() {
-    return ListView(
-      children: [
-        SizedBox(height: 30,),
-        //section who i am
-        Center(child: title_text(title_about1)),
-        SizedBox(height: 50,),
-        Column(
-          children: [
-            image(my_pic2),
-            SizedBox(height: 20,),
-            content(description),
-          ],
-        ),
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 30,),
+          //section who i am
+          Center(child: title_text(title_about1)),
+          SizedBox(height: 50,),
+          Column(
+            children: [
+              image(my_pic2),
+              SizedBox(height: 20,),
+              content(description),
+            ],
+          ),
 
-        SizedBox(height: 150,),
+          SizedBox(height: 150,),
 
-        //section my skills
-        Center(child: title_text(title_about2)),
-        SizedBox(height: 40,),
-        Column(
-          children: [
-            image(my_skillsImage),
-            SizedBox(height: 20,),
-            my_skills(),
-          ],
-        ),
-
-
-        SizedBox(height: 150,),
-
-        //section my education
-        Center(child: title_text(title_about3)),
-        SizedBox(height: 40,),
-        Column(
-          children: [
-            image(my_eduImage),
-            SizedBox(height: 80,),
-            myEducation(),
-          ],
-        ),
-
-        SizedBox(height: 150,),
+          //section my skills
+          Center(child: title_text(title_about2)),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              image(my_skillsImage),
+              SizedBox(height: 20,),
+              my_skills(),
+            ],
+          ),
 
 
-        //section my certified
-        Center(child: title_text(title_about5)),
-        SizedBox(height: 40,),
-        Column(
-          children: [
-            image(certifiedImage),
-            SizedBox(height: 80,),
-            myCertificate(),
-          ],
-        ),
+          SizedBox(height: 150,),
 
-        SizedBox(height: 150,),
+          //section my education
+          Center(child: title_text(title_about3)),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              image(my_eduImage),
+              SizedBox(height: 80,),
+              myEducation(),
+            ],
+          ),
 
-        //section my photos
-        Center(child: title_text(title_about4)),
-        SizedBox(height: 40,),
-        Column(
-          children: [
-            myImage_carousel()
-          ],
-        ),
+          SizedBox(height: 150,),
 
 
-        SizedBox(height: 50,),
-        footer(),
-      ],
+          //section my certified
+          Center(child: title_text(title_about5)),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              image(certifiedImage),
+              SizedBox(height: 80,),
+              myCertificate(),
+            ],
+          ),
+
+          SizedBox(height: 150,),
+
+          //section my experience
+          Center(child: title_text(title_about6)),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              image(my_experience),
+              SizedBox(height: 80,),
+              myExperience(),
+            ],
+          ),
+
+          SizedBox(height: 150,),
+
+          //section my photos
+          Center(child: title_text(title_about4)),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              myImage_carousel()
+            ],
+          ),
+
+
+          SizedBox(height: 50,),
+          footer(),
+        ],
+      ),
     );
   }
 
   Widget desktop_layout() {
-    return ListView(
-      children: [
-        SizedBox(height: 30,),
-        Center(
-            child: Text(
-              heading_about,
-              style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 42),
-            ),
-        ),
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 30,),
+          Center(
+              child: Text(
+                heading_about,
+                style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 42),
+              ),
+          ),
 
-        //section who i am
-        Center(child: title_text(title_about1)),
-        SizedBox(height: 50,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(flex: 2, child: image(my_pic2)),
-            SizedBox(width: 80,),
-            Expanded(flex:3,child: content(description)),
-          ],
-        ),
+          //section who i am
+          Center(child: title_text(title_about1)),
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(flex: 2, child: image(my_pic2)),
+              SizedBox(width: 80,),
+              Expanded(flex:3,child: content(description)),
+            ],
+          ),
 
-        SizedBox(height: 150,),
+          SizedBox(height: 150,),
 
-        //section my skills
-        Center(child: title_text(title_about2)),
-        SizedBox(height: 50,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(flex:3,child: my_skills()),
-            SizedBox(width: 80,),
-            Expanded(flex:2,child: image(my_skillsImage)),
-          ],
-        ),
+          //section my skills
+          Center(child: title_text(title_about2)),
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(flex:3,child: my_skills()),
+              SizedBox(width: 80,),
+              Expanded(flex:2,child: image(my_skillsImage)),
+            ],
+          ),
 
-        SizedBox(height: 150,),
+          SizedBox(height: 150,),
 
-        //section my education
-        Center(child: title_text(title_about3)),
-        SizedBox(height: 50,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(flex:2,child: image(my_eduImage)),
-            SizedBox(width: 80,),
-            Expanded(flex:3,child: myEducation()),
-          ],
-        ),
+          //section my education
+          Center(child: title_text(title_about3)),
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(flex:2,child: image(my_eduImage)),
+              SizedBox(width: 80,),
+              Expanded(flex:3,child: myEducation()),
+            ],
+          ),
 
-        SizedBox(height: 150,),
+          SizedBox(height: 150,),
 
 
-        //section my certified
-        Center(child: title_text(title_about5)),
-        SizedBox(height: 50,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(flex:3,child: myCertificate()),
-            SizedBox(width: 80,),
-            Expanded(flex:2,child: image(certifiedImage)),
-          ],
-        ),
+          //section my certified
+          Center(child: title_text(title_about5)),
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(flex:3,child: myCertificate()),
+              SizedBox(width: 80,),
+              Expanded(flex:2,child: image(certifiedImage)),
+            ],
+          ),
 
-        SizedBox(height: 150,),
+          SizedBox(height: 150,),
 
-        //section my photo
-        Center(child: title_text(title_about4)),
-        SizedBox(height: 50,),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            myImage_carousel()
-          ],
-        ),
-        SizedBox(height: 50,),
-        footer(),
-      ],
+          //section my experience
+          Center(child: title_text(title_about6)),
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(flex:2,child: image(my_experience)),
+              SizedBox(width: 80,),
+              Expanded(flex:3,child: myExperience()),
+            ],
+          ),
+
+          SizedBox(height: 150,),
+
+          //section my photo
+          Center(child: title_text(title_about4)),
+          SizedBox(height: 50,),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              myImage_carousel()
+            ],
+          ),
+          SizedBox(height: 50,),
+          footer(),
+        ],
+      ),
     );
   }
 
@@ -311,7 +346,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget my_skills(){
     return Row(
       children: [
-        Expanded(child: skills_body('C++')),
+        Expanded(child: skills_body('C')),
         Expanded(
           child: Column(
             children: [
@@ -323,9 +358,9 @@ class _AboutPageState extends State<AboutPage> {
         Expanded(
           child: Column(
             children: [
-              skills_body('JavaScript'),
-              skills_body('PHP'),
-              skills_body('Web Design'),
+              skills_body('Git'),
+              skills_body('MySQL'),
+              skills_body('Figma'),
             ],
           ),
         ),
@@ -426,6 +461,37 @@ class _AboutPageState extends State<AboutPage> {
           children: [
             Expanded(child: Text(certificate2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
             Text(certificate2_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+      ],
+    );
+  }
+
+  Widget myExperience(){
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        //college
+        Text(experience1_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(experience1_companyName,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(experience1_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(experience1_location,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+        SizedBox(height: 50,),
+
+        //school
+        Text(experience2_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(experience2_companyName,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(experience2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(experience2_location,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
           ],
         ),
 

@@ -82,56 +82,10 @@ flutter:
 
 
   assets:
-    - images/dark_logo.png
-    - images/red_logo.png
-    - images/white_logo.png
-    - images/my_pic.JPG
-    - images/my_pic_edit.jpg
-    - images/myPic1.jpg
-    - images/lotti_animation.json
-    - images/logo4.json
-    - images/aboutPage_image/edu.png
-    - images/aboutPage_image/skills.jpg
-    - images/aboutPage_image/courses.jpg
-    - images/aboutPage_image/20201203_093652.jpg
-    - images/aboutPage_image/20201203_094008.jpg
-    - images/aboutPage_image/20201203_110907.jpg
-    - images/aboutPage_image/20201203_110923.jpg
-    - images/aboutPage_image/9820201203_100235.jpg
-    - images/aboutPage_image/20211029_172853.jpg
-
-    #flutter projects photo
-    - images/projects_image/F_amarBangla.png
-    - images/projects_image/F_bmi.png
-    - images/projects_image/F_currencyConverter1.png
-    - images/projects_image/F_currencyConverter2.png
-    - images/projects_image/F_news.png
-    - images/projects_image/F_qrCodeScaner.png
-
-    #android project photo
-    - images/projects_image/A_adorsholopi_logo.jpg
-    - images/projects_image/A_beta_browser.jpg
-    - images/projects_image/A_calculaotr_logo.jpg
-    - images/projects_image/A_eshop.png
-    - images/projects_image/A_scanner_por.jpg
-    - images/projects_image/A_unique_trade_link.jpg
-
-    #desktop project photo
-    - images/projects_image/D_emailSender.jpg
-    - images/projects_image/D_fpi_StudentInfo.png
-    - images/projects_image/D_hospitalManagement.jpg
-    - images/projects_image/D_hostelManagement.jpg
-    - images/projects_image/D_inventorySystem.jpg
-    - images/projects_image/D_library.png
-    - images/projects_image/D_schoolManagement.jpg
-
-    #blog images
-    - images/blog/dart.png
-    - images/blog/flutter.png
-    - images/blog/features.jpg
-    - images/blog/flutter_backend.png
-    - images/blog/flutter_react.png
-    - images/blog/flutter_supported.png
+    - images/
+    - images/aboutPage_image/
+    - images/blog/
+    - images/projects_image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

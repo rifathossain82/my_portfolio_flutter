@@ -10,7 +10,8 @@ import 'package:my_protfolio/pages/blog/blog3.dart';
 import 'package:my_protfolio/pages/blog/blog4.dart';
 import 'package:my_protfolio/pages/blog/blog5.dart';
 import 'package:my_protfolio/pages/blog/blog6.dart';
-import '../../widget/footer/footer.dart';
+import 'package:my_protfolio/widget/custom_scroll_behavior.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class BlogPage extends StatelessWidget {
   BlogPage({Key? key}) : super(key: key);
@@ -45,95 +46,104 @@ class BlogPage extends StatelessWidget {
   }
 
   Widget desktop_layout(BuildContext context){
-    return ListView(
-       children: [
-         SizedBox(height: 30,),
-         header(),
-         SizedBox(height: 50,),
-         Row(
-           children: [
-             Expanded(child: blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des)),
-             SizedBox(width: 16,),
-             Expanded(child: blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des)),
-             SizedBox(width: 16,),
-             Expanded(child: blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des)),
-           ],
-         ),
-         SizedBox(height: 50,),
-         Row(
-           children: [
-             Expanded(child: blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des)),
-             SizedBox(width: 16,),
-             Expanded(child: blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des)),
-             SizedBox(width: 16,),
-             Expanded(child: blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des)),
-           ],
-         ),
-         SizedBox(height: 100,),
-         footer(),
-       ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+         children: [
+           SizedBox(height: 30,),
+           header(),
+           SizedBox(height: 50,),
+           Row(
+             children: [
+               Expanded(child: blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des)),
+               SizedBox(width: 16,),
+               Expanded(child: blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des)),
+               SizedBox(width: 16,),
+               Expanded(child: blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des)),
+             ],
+           ),
+           SizedBox(height: 50,),
+           Row(
+             children: [
+               Expanded(child: blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des)),
+               SizedBox(width: 16,),
+               Expanded(child: blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des)),
+               SizedBox(width: 16,),
+               Expanded(child: blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des)),
+             ],
+           ),
+           SizedBox(height: 100,),
+           footer(),
+         ],
+      ),
     );
   }
 
   Widget tablet_layout(BuildContext context){
-    return ListView(
-      children: [
-        SizedBox(height: 30,),
-        header(),
-        SizedBox(height: 50,),
-        Row(
-          children: [
-            Expanded(child: blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des)),
-            SizedBox(width: 16,),
-            Expanded(child: blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des)),
-           ],
-        ),
-        SizedBox(height: 50,),
-        Row(
-          children: [
-            Expanded(child: blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des)),
-            SizedBox(width: 16,),
-            Expanded(child: blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des)),
-          ],
-        ),
-        SizedBox(height: 50,),
-        Row(
-          children: [
-            Expanded(child: blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des)),
-            SizedBox(width: 16,),
-            Expanded(child: blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des)),
-          ],
-        ),
-        SizedBox(height: 100,),
-        footer(),
-      ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 30,),
+          header(),
+          SizedBox(height: 50,),
+          Row(
+            children: [
+              Expanded(child: blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des)),
+              SizedBox(width: 16,),
+              Expanded(child: blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des)),
+             ],
+          ),
+          SizedBox(height: 50,),
+          Row(
+            children: [
+              Expanded(child: blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des)),
+              SizedBox(width: 16,),
+              Expanded(child: blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des)),
+            ],
+          ),
+          SizedBox(height: 50,),
+          Row(
+            children: [
+              Expanded(child: blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des)),
+              SizedBox(width: 16,),
+              Expanded(child: blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des)),
+            ],
+          ),
+          SizedBox(height: 100,),
+          footer(),
+        ],
+      ),
     );
   }
 
   Widget mobile_layout(BuildContext context){
-    return ListView(
-      children: [
-        SizedBox(height: 30,),
-        header(),
-        SizedBox(height: 30,),
-        Column(
-          children: [
-            blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des),
-            SizedBox(height: 8,),
-            blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des),
-            SizedBox(height: 8,),
-            blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des),
-            SizedBox(height: 8,),
-            blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des),
-            SizedBox(height: 8,),
-            blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des),
-            SizedBox(height: 8,),
-            blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des),
-          ],
-        ),
-        SizedBox(height: 100,),
-        footer(),
-      ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 30,),
+          header(),
+          SizedBox(height: 30,),
+          Column(
+            children: [
+              blogItem(context,blog1,blog1Img, blog1_title, my_name, blog1_des),
+              SizedBox(height: 8,),
+              blogItem(context,blog2,blog2Img, blog2_title, my_name, blog2_des),
+              SizedBox(height: 8,),
+              blogItem(context,blog3,blog3Img, blog3_title, my_name, blog3_des),
+              SizedBox(height: 8,),
+              blogItem(context,blog4,blog4Img, blog4_title, my_name, blog4_des),
+              SizedBox(height: 8,),
+              blogItem(context,blog5,blog5Img, blog5_title, my_name, blog5_des),
+              SizedBox(height: 8,),
+              blogItem(context,blog6,blog6Img, blog6_title, my_name, blog6_des),
+            ],
+          ),
+          SizedBox(height: 100,),
+          footer(),
+        ],
+      ),
     );
   }
 

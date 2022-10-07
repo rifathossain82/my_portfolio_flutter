@@ -22,10 +22,9 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   Color dialog_border = Colors.white;
   final formKey = GlobalKey<FormState>();
 
-  TextEditingController controller_name=TextEditingController();
-  TextEditingController controller_email=TextEditingController();
-  TextEditingController controller_message=TextEditingController();
-
+  TextEditingController controller_name = TextEditingController();
+  TextEditingController controller_email = TextEditingController();
+  TextEditingController controller_message = TextEditingController();
 
   @override
   void dispose() {
@@ -38,13 +37,14 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final color_icon = themeProvider.isDarkMode ? Colors.grey[900] : Colors.grey[50];
+    final color_icon =
+        themeProvider.isDarkMode ? Colors.grey[900] : Colors.grey[50];
     dialog_bg = (themeProvider.isDarkMode ? Colors.white : Color(0xFF212936));
     dialog_text = (themeProvider.isDarkMode ? Color(0xFF212936) : Colors.white);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: isDesktop(context)?Desktop_Layout():Mobile_TebletLayout(),
+      body: isDesktop(context) ? Desktop_Layout() : Mobile_TebletLayout(),
       floatingActionButton: FloatingActionButton(
         tooltip: dialog_title,
         child: Icon(
@@ -77,7 +77,8 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
         content: Container(
           width: 320,
           padding: EdgeInsets.only(top: 10),
-          child: Form(key: formKey,
+          child: Form(
+            key: formKey,
             child: Column(
               children: <Widget>[
                 dialogTextField_name(),
@@ -97,7 +98,11 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
           DialogButton(
             onPressed: () {
               if (formKey.currentState!.validate()) {
-                sendEmail(name: controller_name.text, email: controller_email.text, subject: 'Please, Help Me', message: controller_message.text);
+                sendEmail(
+                    name: controller_name.text,
+                    email: controller_email.text,
+                    subject: 'Please, Help Me',
+                    message: controller_message.text);
                 Navigator.of(context).pop();
                 controller_name.clear();
                 controller_email.clear();
@@ -118,8 +123,7 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
       validator: (value) {
         if (value!.isEmpty || !RegExp(r'^[a-z A-Z]+$').hasMatch(value)) {
           return 'Please, Enter correct information!';
-        }
-        else {
+        } else {
           return null;
         }
       },
@@ -127,7 +131,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
       maxLines: 1,
       style: TextStyle(color: dialog_text),
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.account_circle, color: dialog_text,),
+          prefixIcon: Icon(
+            Icons.account_circle,
+            color: dialog_text,
+          ),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(color: dialog_text)),
@@ -151,10 +158,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   Widget dialogTextField_email() {
     return TextFormField(
       validator: (value) {
-        if (value!.isEmpty || !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}').hasMatch(value!)) {
+        if (value!.isEmpty ||
+            !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}').hasMatch(value)) {
           return 'Please, Enter correct information!';
-        }
-        else {
+        } else {
           return null;
         }
       },
@@ -162,7 +169,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
       maxLines: 1,
       style: TextStyle(color: dialog_text),
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.email_outlined, color: dialog_text,),
+          prefixIcon: Icon(
+            Icons.email_outlined,
+            color: dialog_text,
+          ),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(color: dialog_text)),
@@ -186,10 +196,9 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
   Widget dialogTextField_message() {
     return TextFormField(
       validator: (value) {
-        if (value!.isEmpty || !RegExp('').hasMatch(value!)) {
+        if (value!.isEmpty || !RegExp('').hasMatch(value)) {
           return 'Please, Enter correct information!';
-        }
-        else {
+        } else {
           return null;
         }
       },
@@ -197,7 +206,10 @@ class _LayoutTempleteState extends State<LayoutTemplete> {
       maxLines: 5,
       style: TextStyle(color: dialog_text),
       decoration: InputDecoration(
-          prefixIcon: Icon(Icons.comment, color: dialog_text,),
+          prefixIcon: Icon(
+            Icons.comment,
+            color: dialog_text,
+          ),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(color: dialog_text)),

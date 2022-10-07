@@ -7,7 +7,7 @@ import 'package:my_protfolio/widget/socialMediaIcon/SocialMediaIcon.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../providers/themeProvider.dart';
+import 'package:my_protfolio/providers/themeProvider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -26,26 +26,23 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     if (isMobile(context)) {
       return Padding(
-        padding:
-        const EdgeInsets.only(left: 20, top: 20, bottom: 16, right: 8),
+        padding: const EdgeInsets.only(left: 20, top: 20, bottom: 16, right: 8),
         child: ListView(
           children: [
             intro_text_mobile(32),
           ],
         ),
       );
-    }
-    else if (isTab(context)) {
+    } else if (isTab(context)) {
       return Padding(
-        padding: const EdgeInsets.only( left: 20, top: 12, bottom: 16, right: 8),
+        padding: const EdgeInsets.only(left: 20, top: 12, bottom: 16, right: 8),
         child: ListView(
           children: [
             intro_text(50),
           ],
         ),
       );
-    }
-    else {
+    } else {
       return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Row(
@@ -53,11 +50,12 @@ class _HomepageState extends State<Homepage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(child: intro_text(80)),
-              SizedBox(width: 80,),
+              SizedBox(
+                width: 80,
+              ),
               intro_image(),
             ],
-          )
-      );
+          ));
     }
   }
 
@@ -68,28 +66,36 @@ class _HomepageState extends State<Homepage> {
       children: [
         TyperAnimatedTextKit(
           text: [title1],
-          textStyle: GoogleFonts.oxygen(
+          textStyle: GoogleFonts.poppins(
               fontSize: titleFontSize,
               letterSpacing: 2,
               fontWeight: FontWeight.w900,
               color: Colors.blue),
           speed: Duration(milliseconds: 100),
         ),
-        SizedBox(height: 8,),
+        SizedBox(
+          height: 8,
+        ),
         Text(
           title2,
           style: GoogleFonts.oxygen(fontSize: 28, fontWeight: FontWeight.w800),
         ),
-        SizedBox(height: 24,),
+        SizedBox(
+          height: 24,
+        ),
         Text(
           description,
           maxLines: 10,
           style:
               GoogleFonts.oxygen(fontSize: 18, fontWeight: FontWeight.normal),
         ),
-        SizedBox(height: 34,),
+        SizedBox(
+          height: 34,
+        ),
         hire_me(),
-        SizedBox(height: 44,),
+        SizedBox(
+          height: 44,
+        ),
         showSocialMediaIcon_HomePage(context),
       ],
     );
@@ -108,23 +114,27 @@ class _HomepageState extends State<Homepage> {
               fontSize: titleFontSize,
               letterSpacing: 2,
               fontWeight: FontWeight.w800,
-              color: Colors.blue
-          ),
+              color: Colors.blue),
         ),
         Text(
           title2,
           style: GoogleFonts.oxygen(fontSize: 16, color: des_Color),
         ),
-        SizedBox(height: 30,),
+        SizedBox(
+          height: 30,
+        ),
         Text(
           description,
           style: GoogleFonts.oxygen(
-              fontSize: 16, fontWeight: FontWeight.normal, color: des_Color
-          ),
+              fontSize: 16, fontWeight: FontWeight.normal, color: des_Color),
         ),
-        SizedBox(height: 30,),
+        SizedBox(
+          height: 30,
+        ),
         hire_me(),
-        SizedBox(height: 40,),
+        SizedBox(
+          height: 40,
+        ),
         showSocialMediaIcon_HomePage(context),
       ],
     );
@@ -144,8 +154,7 @@ class _HomepageState extends State<Homepage> {
           style: GoogleFonts.heebo(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Colors.white.withOpacity(0.9)
-          ),
+              color: Colors.white.withOpacity(0.9)),
         ),
       ),
     );
@@ -157,16 +166,15 @@ class _HomepageState extends State<Homepage> {
       forceSafariVC: true,
       forceWebView: true,
       enableJavaScript: true,
-    ))
-    {
+    )) {
       throw 'Could not launch $url';
     }
   }
 
   Widget intro_image() {
     return Stack(
+      clipBehavior: Clip.none,
       alignment: Alignment.center,
-      overflow: Overflow.visible,
       children: [
         showImage(),
 
@@ -209,8 +217,10 @@ class _HomepageState extends State<Homepage> {
 
   Widget showImage() {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final _color2 = themeProvider.isDarkMode ? Colors.white10 : Colors.grey.shade100;
-    final _color1 = themeProvider.isDarkMode ? Colors.white12 : Colors.grey.shade200;
+    final _color2 =
+        themeProvider.isDarkMode ? Colors.white10 : Colors.grey.shade100;
+    final _color1 =
+        themeProvider.isDarkMode ? Colors.white12 : Colors.grey.shade200;
     return Container(
       decoration: BoxDecoration(color: _color2, shape: BoxShape.circle),
       child: Padding(
@@ -224,8 +234,8 @@ class _HomepageState extends State<Homepage> {
                 shaderCallback: (bounds) => LinearGradient(colors: [
                   Colors.black38.withOpacity(0.2),
                   Colors.black87.withOpacity(0.8)
-                ], begin: Alignment.center, end: Alignment.bottomCenter
-                ).createShader(bounds),
+                ], begin: Alignment.center, end: Alignment.bottomCenter)
+                    .createShader(bounds),
                 blendMode: BlendMode.darken,
                 child: CircleAvatar(
                   minRadius: 80,
@@ -244,7 +254,8 @@ class _HomepageState extends State<Homepage> {
 
   Widget showDesign(double _height) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final _color = themeProvider.isDarkMode ? Colors.black12 : Colors.grey.shade100;
+    final _color =
+        themeProvider.isDarkMode ? Colors.black12 : Colors.grey.shade100;
     return Transform.rotate(
       angle: 120,
       child: Container(
@@ -267,17 +278,33 @@ class _HomepageState extends State<Homepage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              design_socialMediaIcon(fb_url, FontAwesomeIcons.facebookF, context),
-              SizedBox(width: 8,),
-              design_socialMediaIcon(twitter_url, FontAwesomeIcons.twitter, context),
-              SizedBox(width: 8,),
-              design_socialMediaIcon(instagram_url, FontAwesomeIcons.instagram, context),
-              SizedBox(width: 8,),
-              design_socialMediaIcon(linkedin_url, FontAwesomeIcons.linkedinIn, context),
-              SizedBox(width: 8,),
-              design_socialMediaIcon(github_url, FontAwesomeIcons.github, context),
-              SizedBox(width: 8,),
-              design_socialMediaIcon(youTube_url, FontAwesomeIcons.youtube, context)
+              design_socialMediaIcon(
+                  fb_url, FontAwesomeIcons.facebookF, context),
+              SizedBox(
+                width: 8,
+              ),
+              design_socialMediaIcon(
+                  twitter_url, FontAwesomeIcons.twitter, context),
+              SizedBox(
+                width: 8,
+              ),
+              design_socialMediaIcon(
+                  instagram_url, FontAwesomeIcons.instagram, context),
+              SizedBox(
+                width: 8,
+              ),
+              design_socialMediaIcon(
+                  linkedin_url, FontAwesomeIcons.linkedinIn, context),
+              SizedBox(
+                width: 8,
+              ),
+              design_socialMediaIcon(
+                  github_url, FontAwesomeIcons.github, context),
+              SizedBox(
+                width: 8,
+              ),
+              design_socialMediaIcon(
+                  youTube_url, FontAwesomeIcons.youtube, context)
             ],
           ),
         ],

@@ -6,7 +6,7 @@ import 'package:my_protfolio/constraints/responsive.dart';
 import 'package:my_protfolio/constraints/strings.dart';
 import 'package:my_protfolio/widget/socialMediaIcon/SocialMediaIcon.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../widget/footer/footer.dart';
+import 'package:my_protfolio/widget/footer/footer.dart';
 
 class ContactPage extends StatelessWidget {
   ContactPage({Key? key}) : super(key: key);
@@ -34,42 +34,48 @@ class ContactPage extends StatelessWidget {
   }
 
   Widget desktop_layout(BuildContext context){
-    return ListView(
-      children: [
-        SizedBox(height: 50,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: my_address()),
-            SizedBox(width: 50,),
-            Expanded(child: my_hotline()),
-            SizedBox(width: 50,),
-            Expanded(child: my_email()),
-          ],
-        ),
-        SizedBox(height: 80,),
-        showSocialMediaIcon_contactPage(context),
-        SizedBox(height: 60,),
-        footer(),
-      ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 50,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: my_address()),
+              SizedBox(width: 50,),
+              Expanded(child: my_hotline()),
+              SizedBox(width: 50,),
+              Expanded(child: my_email()),
+            ],
+          ),
+          SizedBox(height: 80,),
+          showSocialMediaIcon_contactPage(context),
+          SizedBox(height: 60,),
+          footer(),
+        ],
+      ),
     );
   }
 
   Widget mobile_layout(BuildContext context){
-    return ListView(
-      children: [
-        SizedBox(height: 20,),
-        my_address(),
-        SizedBox(height: 30,),
-        my_hotline(),
-        SizedBox(height: 30,),
-        my_email(),
-        SizedBox(height: 80,),
-        showSocialMediaIcon_contactPage(context),
-        SizedBox(height: 60,),
-        footer(),
-      ],
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView(
+        children: [
+          SizedBox(height: 20,),
+          my_address(),
+          SizedBox(height: 30,),
+          my_hotline(),
+          SizedBox(height: 30,),
+          my_email(),
+          SizedBox(height: 80,),
+          showSocialMediaIcon_contactPage(context),
+          SizedBox(height: 60,),
+          footer(),
+        ],
+      ),
     );
   }
 

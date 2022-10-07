@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../providers/themeProvider.dart';
+import 'package:my_protfolio/providers/themeProvider.dart';
 
 class Light_Dark_Mode extends StatelessWidget {
   Light_Dark_Mode({Key? key}) : super(key: key);

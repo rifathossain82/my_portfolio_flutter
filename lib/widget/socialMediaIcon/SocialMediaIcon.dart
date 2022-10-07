@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../providers/themeProvider.dart';
+import 'package:my_protfolio/providers/themeProvider.dart';
 
 Widget design_socialMediaIcon(String url, IconData icon, BuildContext context) {
   final themeProvider = Provider.of<ThemeProvider>(context);
