@@ -295,7 +295,7 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   Widget download_cv() {
-    return RaisedButton(
+    return MaterialButton(
       color: Colors.blue,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       onPressed: () {
@@ -372,7 +372,7 @@ class _AboutPageState extends State<AboutPage> {
             ],
           ),
         ),
-        Expanded(child: skills_body('''Desktop Application'''))
+        Expanded(child: skills_body('''Java Swift'''))
       ],
     );
   }
@@ -409,7 +409,7 @@ class _AboutPageState extends State<AboutPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        //college
+        //school
         Text(education1_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
         Text(education1_institute,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
         Row(
@@ -421,13 +421,25 @@ class _AboutPageState extends State<AboutPage> {
 
         SizedBox(height: 50,),
 
-        //school
+        //college
         Text(education2_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
         Text(education2_institute,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
         Row(
           children: [
             Expanded(child: Text(education2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
             Text(education2_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+        SizedBox(height: 50,),
+
+        //college
+        Text(education3_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(education3_institute,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(education3_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(education3_result,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
           ],
         ),
 
@@ -473,7 +485,7 @@ class _AboutPageState extends State<AboutPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        //college
+        //utc
         Text(experience1_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
         Text(experience1_companyName,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
         Row(
@@ -485,13 +497,25 @@ class _AboutPageState extends State<AboutPage> {
 
         SizedBox(height: 50,),
 
-        //school
+        //web point
         Text(experience2_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
         Text(experience2_companyName,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
         Row(
           children: [
             Expanded(child: Text(experience2_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
             Text(experience2_location,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
+          ],
+        ),
+
+        SizedBox(height: 50,),
+
+        //akaar it ltd.
+        Text(experience3_title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w500),),
+        Text(experience3_companyName,style: GoogleFonts.poppins(fontSize: 17,fontWeight: FontWeight.w400),),
+        Row(
+          children: [
+            Expanded(child: Text(experience3_duration,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic),)),
+            Text(experience3_location,style: GoogleFonts.poppins(fontSize: 14,fontStyle: FontStyle.italic,color: Colors.red)),
           ],
         ),
 

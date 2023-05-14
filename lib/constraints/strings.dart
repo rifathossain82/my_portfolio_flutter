@@ -1,6 +1,6 @@
 String app_name = 'RIFAT HOSSAIN';
 String my_name = 'Rifat Hossain';
-String footer_text = 'All rights reserved by officialrifat82@gmail.com';
+String footer_text = 'All rights reserved by appdev.rifathossain@gmail.com';
 
 //navbar item name
 String home_ = 'HOME';
@@ -29,15 +29,15 @@ List<String> appBar_name = [
 String title1 = 'HI! I\'M RIFAT';
 String title2 = 'Flutter Apps Developer';
 String description = '''
-Software Developer with almost one year of experience of Flutter App Development and one year of Native Android App Development. Passionate about coding and problem solving.''';
+Software Engineer with 2+ years of experience of Flutter App Development. Has experience of working in POS (Point of Sale), DMS (Document Management System) and E-commerce with strong problem-solving capabilities who is seeking to obtain a creative and challenging position to utilizes current knowledge to android and iOS apps development. Extremely passionate towards software architecture and design combined with sensitivity to serve the needs to the business balanced with the delivery of high-quality solutions.''';
 String hireMe = 'Hire me';
 
 //all social link of mine
-String fb_url = 'https://www.facebook.com/dev.rifathossain';
+String fb_url = 'https://www.facebook.com/appdev.rifathossain/';
 String twitter_url = 'https://twitter.com/rifathossain82';
 String instagram_url = 'https://www.instagram.com/rh_rifat220/';
 String linkedin_url = 'https://www.linkedin.com/in/rifathossain82/';
-String github_url = 'https://github.com/rifathossain82';
+String github_url = 'https://github.com/rifathossain82/';
 String fiverr_url = 'https://www.fiverr.com/rifathossain82';
 String youTube_url = 'https://www.youtube.com/channel/UCHQjehNirRNYmWtYK0rh9jg';
 
@@ -65,38 +65,48 @@ String content_about1 =
 String content_about3 =
     'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.';
 
-String education1_title = 'Diploma in Computer Engineering';
-String education1_institute = 'Feni Polytechnic Institute';
-String education1_duration = '2017 - 2021';
-String education1_result = 'Appeared';
+String education1_title = '10th Boards';
+String education1_institute = 'Kandughar B.B.S. High School';
+String education1_duration = '01/2012 - 03/2017';
+String education1_result = '4.36';
 
-String education2_title = '10th Boards';
-String education2_institute = 'Kandughar B.B.S. High School';
-String education2_duration = '01/2012 - 03/2017';
-String education2_result = '4.36';
+String education2_title = 'Diploma in Computer Engineering';
+String education2_institute = 'Feni Polytechnic Institute';
+String education2_duration = '2017 - 2021';
+String education2_result = '3.64';
+
+String education3_title = 'B.Sc in CSE';
+String education3_institute = 'Northern University Bangladesh';
+String education3_duration = '2023 - Present';
+String education3_result = '...';
 
 String certificate_title = 'Android Apps Development Using Java';
 String certificate_institute = 'Universal Technology Corporation';
 String certificate_institute_address = 'Dr. para, Feni, Bangladesh.';
-String certificate_duration = '02/2019 - 11/2021';
+String certificate_duration = '02/2019 - 03/2021';
 String certificate_result = 'Successfully Completed';
 
 String certificate2_title = 'Mobile Game & Applications Using Flutter';
 String certificate2_institute = 'Ezze Technology Limited';
 String certificate2_institute_address =
     '49, Software Technology Park, Janata Tower (7th floor), Kawran Bazar, Dhaka-1215.';
-String certificate2_duration = '10/2021 - 01/2022';
+String certificate2_duration = '08/2021 - 01/2022';
 String certificate2_result = 'Successfully Completed';
 
-String experience1_title = 'Flutter App Developer';
-String experience1_companyName = 'Web Point Limited';
-String experience1_duration = '15 March 2022 - Present';
-String experience1_location = 'Chittagong';
+String experience1_title = 'Junior Flutter App Developer';
+String experience1_companyName = 'Universal Technology Corporation';
+String experience1_duration = '01 April 2021 - 10 March 2022';
+String experience1_location = 'Feni';
 
-String experience2_title = 'Intern Flutter Developer';
-String experience2_companyName = 'Skill Based Information Technology';
-String experience2_duration = '01 October 2021 - 10 March 2022';
-String experience2_location = 'Feni';
+String experience2_title = 'Flutter App Developer';
+String experience2_companyName = 'Web Point Limited';
+String experience2_duration = '15 March 2022 - 31 October';
+String experience2_location = 'Chittagong';
+
+String experience3_title = 'Software Engineer (Flutter)';
+String experience3_companyName = 'Akaar It Ltd.';
+String experience3_duration = '02 November 2022 - Present';
+String experience3_location = 'Dhaka';
 
 List<String> my_images = [
   'images/aboutPage_image/20201203_110907.jpg',
@@ -321,7 +331,7 @@ String blog6_detailsdes1 =
 String address_Title = 'Address';
 String address_present_title = 'Present Address';
 String address_permanent_title = 'Permanent Address';
-String address_present = 'New CDA, Chittagong, Bangladesh';
+String address_present = 'Sector 14, Uttara, Dhaka, Bangladesh';
 String address_permanent = 'Kandughar, B-para, Comilla, Chittagong, Bangladesh';
 
 //hotline
@@ -337,9 +347,9 @@ String hotline3 = '01585002495';
 String email_titile = 'Email';
 String email_official_titile = 'Official';
 String email_personal_titile = 'Personal';
-String email_1 = 'officialrifat82@gmail.com';
-String email_2 = 'rhrifat940279@gmail.com';
-String email_3 = 'rh5256220@gmail.com';
+String email_1 = 'appdev.rifathossain@gmail.com';
+String email_2 = 'officialrifat82@gmail.com';
+String email_3 = 'rhrifat940279@gmail.com';
 
 //all images of app
 
@@ -357,7 +367,7 @@ String my_skillsImage = 'images/aboutPage_image/skills.jpg';
 String my_eduImage = 'images/aboutPage_image/edu.png';
 String my_experience = 'images/aboutPage_image/experience.jpg';
 String certifiedImage = 'images/aboutPage_image/courses.jpg';
-String cv_download_link = 'https://bparatoday.com/CV_of_Rifat_Hossain.pdf';
+String cv_download_link = 'https://drive.google.com/file/d/1rjYC_GYCTJv7lK6gooKkXFIzYEfIjc8b/view?usp=sharing';
 
 //project page (total project 19 (flutter,android, desktop))
 //flutter apps image

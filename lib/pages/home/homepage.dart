@@ -141,11 +141,11 @@ class _HomepageState extends State<Homepage> {
   }
 
   Widget hire_me() {
-    return RaisedButton(
+    return MaterialButton(
       color: Colors.blue,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       onPressed: () {
-        _launchURL(fiverr_url);
+        _launchURL(linkedin_url);
       },
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 26),
