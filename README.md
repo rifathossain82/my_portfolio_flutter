@@ -1,16 +1,13 @@
-# my_protfolio
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot (68)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/07aa2d46-2da4-434e-b87f-735d344a7870)
+![Screenshot (69)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/4b566f86-9e3d-4ca1-b629-7436348a616e)
+![Screenshot (72)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/7410e457-5c46-48ce-97f1-b4270d1fd052)
+![Screenshot (73)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/78d0c50e-e759-41f8-b476-7d5e7f8ee4ad)
+![Screenshot (74)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/d060c266-60df-45f4-a50b-648518e65036)
+![Screenshot (75)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/22a18a5d-f292-4e20-bfd6-6277472f3b29)
+![Screenshot (76)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/0ea00070-3e7f-4925-b36d-af86b0a4a4aa)
+![Screenshot (77)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/d4cc101e-639d-4b3e-8562-4364f4ec810c)
+![Screenshot (78)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/f4086a64-1764-48d2-9b13-49028021cedb)
+![Screenshot (79)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/604d368e-7f51-48c6-9897-f20c3685fd0d)
+![Screenshot (80)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/8f4964e2-4d6c-4cde-8a3d-650d367804aa)
+![Screenshot (71)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/ebe1e1cd-5fca-4848-95fa-5238b7571220)
+![Screenshot (81)](https://github.com/rifathossain82/my_portfolio_flutter/assets/88751768/67cfc180-ebb8-4093-8224-08a22e503f3c)
